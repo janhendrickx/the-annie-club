@@ -1,0 +1,22 @@
+dateModified: 1748512476
+email:
+  fromEmail: admin@janhendrickx.be
+  fromName: 'The Annie Club'
+  transportType: craft\mail\transportadapters\Sendmail
+meta:
+  __names__:
+    702fb49c-145b-4804-9326-248b64c7d98c: 'The Annie Club' # The Annie Club
+    dd6e4919-ff41-4207-af9c-630665454e96: 'The Annie Club' # The Annie Club
+system:
+  edition: solo
+  live: true
+  name: 'The Annie Club'
+  schemaVersion: 5.7.0.3
+  timeZone: America/Los_Angeles
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  require2fa: false
+  requireEmailVerification: true

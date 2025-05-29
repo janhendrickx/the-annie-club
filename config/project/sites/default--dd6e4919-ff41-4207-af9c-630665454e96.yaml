@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: nl
+name: 'The Annie Club'
+primary: true
+siteGroup: 702fb49c-145b-4804-9326-248b64c7d98c # The Annie Club
+sortOrder: 1
