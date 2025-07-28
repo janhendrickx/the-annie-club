@@ -1,0 +1,24 @@
+
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const grid = document.querySelector('.masonry-grid');
+  const msnry = new Masonry(grid, {
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-item',
+    percentPosition: true
+  });
+
+  document.querySelectorAll('.category-nav a').forEach(btn => {
+    btn.addEventListener('click', e => {
+      e.preventDefault();
+      const filter = btn.dataset.filter;
+      document.querySelectorAll('.grid-item').forEach(item => {
+        item.style.display = item.dataset.category === filter || filter === 'all' ? 'block' : 'none';
+        console.log(item.dataset.category);
+      });
+      msnry.layout();
+    });
+  });
+});
+</script>

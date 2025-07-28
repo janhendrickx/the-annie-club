@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 96da3f18-1b13-4c2c-8aff-47ceb2649faa # Pagina
+handle: paginas
+maxAuthors: 1
+name: "Pagina's"
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club
+    enabledByDefault: true
+    hasUrls: true
+    template: page
+    uriFormat: '{slug}'
+structure:
+  maxLevels: null
+  uid: 76c5ea50-3687-4251-b15c-84b8fc0ad08c
+type: structure

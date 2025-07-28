@@ -1,18 +1,100 @@
-dateModified: 1748512476
+dateModified: 1753692822
+elementSources:
+  craft\elements\Asset:
+    -
+      defaultSort:
+        - dateCreated
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
+      tableAttributes:
+        - filename
+        - size
+        - dateModified
+        - link
+        - 'field:9ccfab1b-7fcd-4e50-9b17-9cd30330a654' # Categorie
+      type: native
+    -
+      key: temp
+      type: native
+  craft\elements\Entry:
+    -
+      key: '*'
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
+      key: singles
+      tableAttributes:
+        - status
+        - link
+        - type
+      type: native
+    -
+      heading: Structures
+      type: heading
+    -
+      key: 'section:2ccfb376-804c-4417-836c-b2a543c2d25f' # Categorieën
+      type: native
+    -
+      key: 'section:34d01be4-5471-43d6-ad9e-886596d50f55' # Navigatie
+      type: native
+    -
+      key: 'section:76bff2af-8e60-4d73-9346-76389dbe69f0' # Pagina's
+      type: native
 email:
   fromEmail: admin@janhendrickx.be
   fromName: 'The Annie Club'
   transportType: craft\mail\transportadapters\Sendmail
+fs:
+  bestanden:
+    hasUrls: true
+    name: Bestanden
+    settings:
+      path: '@webroot/uploads/fotos'
+    type: craft\fs\Local
+    url: '@web/uploads/fotos'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
 meta:
   __names__:
+    0e0c46fb-9378-4e66-93e1-b773b3831507: Simple # Simple
+    2ccfb376-804c-4417-836c-b2a543c2d25f: Categorieën # Categorieën
+    5fc80e32-db57-4dfa-9d7f-a22ae92ca168: 'Te tonen categorieën' # Te tonen categorieën
+    6ce5706b-7cce-45e2-b3d7-ebbf369ed760: Fotogalerij # Fotogalerij
+    6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8: "Foto's" # Foto's
+    7c714788-dbde-4f28-9034-28adbf9cf5da: Fotogallery # Fotogallery
+    9ccfab1b-7fcd-4e50-9b17-9cd30330a654: Categorie # Categorie
+    34d01be4-5471-43d6-ad9e-886596d50f55: Navigatie # Navigatie
+    76bff2af-8e60-4d73-9346-76389dbe69f0: "Pagina's" # Pagina's
+    96da3f18-1b13-4c2c-8aff-47ceb2649faa: Pagina # Pagina
+    460ec1d4-502a-4553-82f2-23c3f41054a7: Home # Home
     702fb49c-145b-4804-9326-248b64c7d98c: 'The Annie Club' # The Annie Club
+    940ab21b-abee-4658-9c5c-a914247d6f28: "Foto's" # Foto's
+    5724cdab-a194-4976-b0a9-cfdb42b12b60: Tekst # Tekst
+    96232019-438e-4cf2-9ec3-363faddbc88b: Pagina # Pagina
+    b2a8d6cc-0b1f-4039-842f-2977ac14c237: Link # Link
+    b7f3fc25-f9a6-45b0-ae16-e3f5eaee24b4: Homepage # Homepage
     dd6e4919-ff41-4207-af9c-630665454e96: 'The Annie Club' # The Annie Club
+    e5999d1c-04e2-4d0e-ba9c-abdaf5aabf2e: Categorie # Categorie
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: solo
   live: true
   name: 'The Annie Club'
-  schemaVersion: 5.7.0.3
-  timeZone: America/Los_Angeles
+  retryDuration: null
+  schemaVersion: 5.8.0.3
+  timeZone: Europe/Brussels
 users:
   allowPublicRegistration: false
   defaultGroup: null

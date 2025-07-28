@@ -1,0 +1,13 @@
+@import "node_modules/bootstrap/scss/functions.scss";
+@import "node_modules/bootstrap/scss/variables.scss";
+@import "node_modules/bootstrap/scss/maps.scss";
+@import "node_modules/bootstrap/scss/mixins.scss";
+
+// my custom variables
+@import "variables.scss";
+
+// boostrap variables
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+// custom
+@import "fonts.scss";
+@import "style.scss";

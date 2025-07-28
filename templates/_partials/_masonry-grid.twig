@@ -1,0 +1,10 @@
+<div class="masonry-grid galery">
+	<ul>
+		{% for photo in photos %}
+			{% set cat = photo.category.one().slug ?? null %}
+
+			<div class="grid-item" data-category="{{ cat }}">
+				<img src="{{ photo.url }}" alt="{{ photo.title }}">
+			</div>
+		{% endfor %}
+		<ul></div>

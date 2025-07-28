@@ -19,22 +19,16 @@
 {% block content %}
 	{% include "_partials/_header.twig" %}
 
-	<main class="section py-4">
-        <div class="container">   
-		    {% include "_partials/_masonry-grid.twig" %}
-        </div>
+	<main class="section">
+    <div class="container pt-4 pb-2">
+        <h1>{{ entry.title }}
+    </div>
+		{# {% include "_partials/_masonry-grid.twig" %} #}
+    <div class="container py-4">
+        <div>{{ entry.tekst }}</div>
+    </div>
 	</main>
 
-    <div class="container">
-        <nav class="category-nav">
-            <a href="#" data-filter="all">All</a>
-            {% if linkedPhotoCats is not empty %}
-                {% for category in linkedPhotoCats %}
-                    <a class="nav-link" href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
-                {% endfor %}
-            {% endif %}
-        </nav>
-    </div>
 
 	{# {% include "_partials/_footer.twig" %} #}
 {% endblock %}

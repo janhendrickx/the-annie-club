@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: b2a8d6cc-0b1f-4039-842f-2977ac14c237 # Link
+handle: navigation
+maxAuthors: 1
+name: Navigatie
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: null
+  uid: ace4ec2c-44e7-4594-91d0-2a6c68a27765
+type: structure

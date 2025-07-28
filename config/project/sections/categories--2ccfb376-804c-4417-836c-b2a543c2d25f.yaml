@@ -1,0 +1,31 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: e5999d1c-04e2-4d0e-ba9c-abdaf5aabf2e # Categorie
+handle: categories
+maxAuthors: 1
+name: Categorieën
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+structure:
+  maxLevels: 1
+  uid: dfd16d92-157a-4c7d-84d1-2fb497ebed43
+type: structure

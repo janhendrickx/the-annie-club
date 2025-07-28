@@ -1,4 +1,5 @@
-baseUrl: $PRIMARY_SITE_URL
+baseUrl: 'https://the-annie-club.ddev.site/'
+enabled: true
 handle: default
 hasUrls: true
 language: nl
