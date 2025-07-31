@@ -1,0 +1,143 @@
+color: null
+description: null
+fieldLayouts:
+  16b91a8b-96c1-4a83-ac4e-0197f1c39ac9:
+    cardThumbAlignment: start
+    cardView:
+      - 'layoutElement:0417957b-ca8c-4169-877e-abba352efba8'
+      - 'layoutElement:5c904126-d2f0-4f07-a4f0-bcd54bf13a26'
+      - 'layoutElement:2435d6fe-1a70-4302-af85-50da78f31f31'
+      - 'layoutElement:f1f4beab-e576-4280-b6a7-37fc55b190ab'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-07-28T18:30:54+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: e7680892-e6b4-46b8-b533-cf7c9a7bda31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-31T07:25:18+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 82b7f5a5-6739-4baa-bd7c-c4a4bfafc1a7 # Breedte fotogroep
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5c904126-d2f0-4f07-a4f0-bcd54bf13a26
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-31T09:39:08+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 8c443b09-d123-4ae7-96bd-f1d4bdf718c8 # Verticale verdeling
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2435d6fe-1a70-4302-af85-50da78f31f31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-31T12:34:07+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 51d6a2c6-9f6a-406c-bec7-c2487d5af200 # Positie hoofdfoto
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0417957b-ca8c-4169-877e-abba352efba8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-31T12:34:07+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 1073c1d2-bcb7-4fa8-9400-f9942f9f625e # Hoofdfoto
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c0423cee-55ca-4e82-b0c8-1bb2b2c51179
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-28T18:32:14+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5670040b-eaf9-43e6-91bf-337086235699 # Fotos
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f1f4beab-e576-4280-b6a7-37fc55b190ab
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5b8a8ebc-addc-4266-8dcc-ad2b3c70ab9e
+        userCondition: null
+handle: pics
+hasTitleField: true
+icon: null
+name: Fotos
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

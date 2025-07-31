@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: photogallery
+handle: picsGroup
 instructions: null
-name: Fotogalerij
+name: Fotos
 searchable: false
 settings:
   allowSelfRelations: false
@@ -13,11 +13,11 @@ settings:
   defaultUploadLocationSource: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 2
+  minRelations: 0
   previewMode: full
   restrictFiles: false
-  restrictLocation: true
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
   restrictedLocationSubpath: null

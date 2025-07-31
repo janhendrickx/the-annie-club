@@ -1,0 +1,56 @@
+{% set allPics = craft.entries().section('photogallery').one() %}
+
+{# <div class="gallery-wrapper">
+    <div class="gallery">
+    	{% for photo in photos %}
+            {% set width = photo.width %}
+            {% set height = photo.height %}
+            {% set ratio = (width / height)|round(2) %}
+            {% set size = ratio < 1 ? photo.getUrl({ width: 150 }) : photo.getUrl({ width: 200 }) %}
+        
+
+			{% set cat = photo.category.one().slug ?? null %}
+                <div class="gallery-item" style="padding-bottom: {{ (1 / ratio) * 100 }}%;">
+                    <a href={{ photo.url }} data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen">
+                        <img src="{{ size }}" alt="{{ photo.title }}">
+                    </a>
+                </div>
+            {% endfor %}
+    </div>
+</div>	 #}
+{# {% set picGroups = entry.picMatrix %} #}
+
+<div class="grids-wrapper">
+    {% for block in allPics.picMatrix %}
+        {# {% if block.picsGroup|length == 2 %}
+            {% include "_partials/grids/one-on-one" %}
+        {% else %} #}
+            {% include "_partials/grids/two-on-one" %}
+        {# {% endif %} #}
+        
+    {% endfor %}
+</div>
+    {# {% for photo in photos %}
+        {% set cat = photo.category.one().slug ?? null %}
+        <div class="gallery-item" data-category="{{ cat }}">
+            <img src="{{ photo.url }}" alt="{{ photo.title }}">
+        </div>
+    {% endfor %} #}
+
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="assets/js/isotope.pkgd.js"></script>
+<script src="assets/js/masonryhorizontal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.5/dist/index.bundle.min.js"></script>
+<script>
+{% for block in allPics.picMatrix %}
+    {# $(".grid-wrapper-").isotope({
+    layoutMode: 'masonryHorizontal',
+    itemSeletor: '.grid-container-{{ block.id }}',
+    masonryHorizontal: {
+        rowHeight: 50,
+        gutter: 20
+    }
+    }); #}
+{% endfor %}
+</script>

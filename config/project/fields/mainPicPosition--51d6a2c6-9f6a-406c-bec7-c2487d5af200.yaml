@@ -1,0 +1,45 @@
+columnSuffix: null
+handle: mainPicPosition
+instructions: null
+name: 'Positie hoofdfoto'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Boven
+        -
+          - value
+          - top
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Onder
+        -
+          - value
+          - bottom
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

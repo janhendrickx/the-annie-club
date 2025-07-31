@@ -24,6 +24,7 @@
   "author": "Jan Hendrickx",
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.6"
+    "bootstrap": "^5.3.6",
+    "bs5-lightbox": "^1.8.5"
   }
 }

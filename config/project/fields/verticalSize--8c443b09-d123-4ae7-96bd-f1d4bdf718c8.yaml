@@ -1,0 +1,14 @@
+columnSuffix: null
+handle: verticalSize
+instructions: 'De verticale onderverdeling: hoe hoog moeten de 2 rijen zijn'
+name: 'Verticale verdeling'
+searchable: false
+settings:
+  defaultValue: 50
+  max: 100
+  min: 0
+  step: 1
+  suffix: '%'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Range

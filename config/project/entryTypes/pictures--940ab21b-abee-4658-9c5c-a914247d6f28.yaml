@@ -1,6 +1,8 @@
 color: null
+description: null
 fieldLayouts:
   70838215-b807-400a-9300-9f06f968b1c3:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -36,10 +38,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-06-16T10:17:11+00:00'
+            dateAdded: '2025-07-28T18:25:04+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 6ce5706b-7cce-45e2-b3d7-ebbf369ed760 # Fotogalerij
+            fieldUid: c5371f50-6484-46d4-9a00-27051cfc9635 # Fotos (Matrix)
             handle: null
             includeInCards: false
             instructions: null
@@ -48,7 +50,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 86fece98-81b5-4d40-8b03-2b4967833f7c
+            uid: d45ecf58-70cd-481d-bf80-e3ebba175a36
             userCondition: null
             warning: null
             width: 100

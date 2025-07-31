@@ -1,6 +1,5 @@
 {% extends "_layout.twig" %}
-{% set galery = craft.entries().section('photogallery').one() %}
-{% set photos = galery.photogallery %}
+
 {% set linkedPhotoCats = craft.entries()
     .section('categories')           
     .all()
@@ -20,12 +19,10 @@
 	{% include "_partials/_header.twig" %}
 
 	<main class="section py-4">
-        <div class="container">   
-		    {% include "_partials/_masonry-grid.twig" %}
-        </div>
+        {% include "_partials/_photos-grid.twig" %}
 	</main>
 
-    <div class="container">
+    <div class="section">
         <nav class="category-nav">
             <a href="#" data-filter="all">All</a>
             {% if linkedPhotoCats is not empty %}

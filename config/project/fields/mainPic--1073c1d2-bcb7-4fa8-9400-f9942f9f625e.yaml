@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: photogallery
+handle: mainPic
 instructions: null
-name: Fotogalerij
+name: Hoofdfoto
 searchable: false
 settings:
   allowSelfRelations: false
@@ -13,18 +13,18 @@ settings:
   defaultUploadLocationSource: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
-  minRelations: null
+  maxRelations: 1
+  minRelations: 1
   previewMode: full
   restrictFiles: false
-  restrictLocation: true
+  restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
   showSearchInput: true
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
