@@ -1,4 +1,4 @@
-dateModified: 1753967982
+dateModified: 1753972132
 elementSources:
   craft\elements\Asset:
     -
@@ -70,7 +70,7 @@ meta:
     6ce5706b-7cce-45e2-b3d7-ebbf369ed760: Fotogalerij # Fotogalerij
     6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8: "Foto's" # Foto's
     7c714788-dbde-4f28-9034-28adbf9cf5da: Fotogallery # Fotogallery
-    8c443b09-d123-4ae7-96bd-f1d4bdf718c8: 'Verticale verdeling' # Verticale verdeling
+    8c443b09-d123-4ae7-96bd-f1d4bdf718c8: 'Hoogte hoofdfoto' # Hoogte hoofdfoto
     9ccfab1b-7fcd-4e50-9b17-9cd30330a654: Categorie # Categorie
     34d01be4-5471-43d6-ad9e-886596d50f55: Navigatie # Navigatie
     51d6a2c6-9f6a-406c-bec7-c2487d5af200: 'Positie hoofdfoto' # Positie hoofdfoto

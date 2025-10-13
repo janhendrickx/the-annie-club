@@ -13,7 +13,7 @@ settings:
           - Boven
         -
           - value
-          - top
+          - mainpic-top
         -
           - icon
           - ''
@@ -30,7 +30,7 @@ settings:
           - Onder
         -
           - value
-          - bottom
+          - mainpic-bottom
         -
           - icon
           - ''

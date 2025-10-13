@@ -23,6 +23,6 @@ siteSettings:
   dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club
     enabledByDefault: true
     hasUrls: true
-    template: fotogallery/_entry.twig
+    template: photogallery.twig
     uriFormat: fotogallery
 type: single

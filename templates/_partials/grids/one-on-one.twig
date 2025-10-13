@@ -1,10 +1,4 @@
-<div class="grid-wrapper grid--one-on-one" style="width: {{ block.picsGoupWidth + 10 }}px">
-    {% for photo in block.picsGroup %}
-        {% set pictureSize = photo.getUrl({ width: ( (block.picsGoupWidth) ) }) %}
-        {% set height = block.verticalSize ~ "%" %}
-        {% set cat = photo.category.one().slug ?? null %}
-        <a href="{{ photo.url }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="pic column-item">
-            <img src="{{ pictureSize }}" alt="{{ photo.title }}" style="height: {{ height }}">
-        </a>
-    {% endfor %}
+<div class="grid-wrapper grid--one-on-one" style="width: {{ block.picsGoupWidth }}px">
+    {% include "_partials/grids/mainpic" %}
+    {% include "_partials/grids/picsGroup" %}
 </div>

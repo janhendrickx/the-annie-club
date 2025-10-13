@@ -25,6 +25,8 @@
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.6",
-    "bs5-lightbox": "^1.8.5"
+    "bs5-lightbox": "^1.8.5",
+    "isotope-layout": "^3.0.6",
+    "swiper": "^11.2.10"
   }
 }

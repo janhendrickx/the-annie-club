@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: verticalSize
-instructions: 'De verticale onderverdeling: hoe hoog moeten de 2 rijen zijn'
-name: 'Verticale verdeling'
+handle: mainPicHeight
+instructions: "De hoogte (in percentage) van de hoofdfoto tov de andere foto's"
+name: 'Hoogte hoofdfoto'
 searchable: false
 settings:
   defaultValue: 50

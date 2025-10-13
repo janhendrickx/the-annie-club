@@ -1,90 +1,42 @@
+$gapsize: 1rem;
+
 .grids-wrapper {
     width: 100vw;
-    height: 500px;
+    // This height is being set in the template so it can be used in other calculations
+    // height: 500px;
     display: flex;
-    // display: inline-block;
-    // border: 2px solid red;
 }
 .grid-wrapper {
     // display: flex;
     // flex-direction: row;
-    border: 2px solid hotpink;
-    
-}
-
-/* ---- grid ---- */
-.grid {
-    border: 2px solid blue;
-    background: #DDD;
-    height: 500px; /* inherit height from body */
-    // display: inline-block;
-}
-
-/* clear fix */
-// .grid:after {
-//   content: '';
-//   display: block;
-//   clear: both;
-// }
-.grid-container {
-    display: grid; /* Maak van dit element een Grid container */
-    grid-template-columns: 1fr 1fr; /* Verdeel de ruimte in twee gelijke kolommen */
-    grid-template-rows: auto auto; /* De rijen zullen hun hoogte bepalen op basis van de inhoud */
-    justify-content: space-between;
-    // gap: 10px; /* Voeg wat ruimte toe tussen de grid items (optioneel) */
-}
-
-.pic {
-    height: fit-content;
-    width: fit-content;
-    display: inline-block;
-    float: left;
+    display: grid;
+    gap: $gapsize;
+    &:not(:last-child) {
+        margin-right: $gapsize;
+    }
 }
 
 .header-item {
     grid-column: 1 / -1; /* Dit item beslaat alle kolommen, van de eerste tot de laatste */
-    background-color: lightblue; /* Voor visualisatie */
     img {
-        object-fit: fill;
+        object-fit: cover;
     }
+}
+
+.picsGroup-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $gapsize;
 }
 
 .column-item {
     overflow: hidden;
+    
     img {
-        object-fit: contain;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: center;
     }
-//   border: 3px solid green;
 }
-
-/* ---- .grid-item ---- */
-
-// .grid-item {
-//   float: left;
-//   width: 100px;
-//   height: 100px;
-//   background: #0D8;
-//   border: 2px solid #333;
-//   border-color: hsla(0, 0%, 0%, 0.7);
-//   img {
-//     // height: fit-content;
-//     // width: fit-content;
-//     // max-width: 100%;
-//     // max-height: 100%;
-//   }
-// }
-
-// .landscape { 
-//     width: 200px; 
-//     img {
-//         width: 100%;
-//         height: fit-content;
-//     }
-// }
-// .portrait { 
-//     height: 200px; 
-//     img {
-//         height: 100%;
-//         width: fit-content;
-//     }
-// }

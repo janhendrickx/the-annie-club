@@ -4,6 +4,7 @@
  * Copyright 2011-2025 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "node_modules/swiper/swiper-bundle.min.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -12012,56 +12013,44 @@ textarea.form-control-lg {
 }
 .grids-wrapper {
   width: 100vw;
-  height: 500px;
   display: flex;
 }
 
 .grid-wrapper {
-  border: 2px solid hotpink;
+  display: grid;
+  gap: 1rem;
 }
-
-/* ---- grid ---- */
-.grid {
-  border: 2px solid blue;
-  background: #DDD;
-  height: 500px; /* inherit height from body */
-}
-
-/* clear fix */
-.grid-container {
-  display: grid; /* Maak van dit element een Grid container */
-  grid-template-columns: 1fr 1fr; /* Verdeel de ruimte in twee gelijke kolommen */
-  grid-template-rows: auto auto; /* De rijen zullen hun hoogte bepalen op basis van de inhoud */
-  justify-content: space-between;
-}
-
-.pic {
-  height: -moz-fit-content;
-  height: fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  display: inline-block;
-  float: left;
+.grid-wrapper:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .header-item {
   grid-column: 1/-1; /* Dit item beslaat alle kolommen, van de eerste tot de laatste */
-  background-color: lightblue; /* Voor visualisatie */
 }
 .header-item img {
-  -o-object-fit: fill;
-     object-fit: fill;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.picsGroup-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
 }
 
 .column-item {
   overflow: hidden;
 }
 .column-item img {
-  -o-object-fit: contain;
-     object-fit: contain;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
-/* ---- .grid-item ---- */
 a {
   text-transform: lowercase;
 }
@@ -12090,4 +12079,5 @@ body {
   text-decoration: none;
   color: #99aabb;
   font-weight: bold;
+  font-size: 1.5rem;
 }
