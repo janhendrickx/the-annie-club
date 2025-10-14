@@ -1,14 +1,4 @@
-
-  {# src="{{ asset.url }}"
-  width="{{ asset.width }}"
-  height="{{ asset.height }}"> #}
-
-<a href="{{ mainPic.url }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item main-pic header-item">
+{% set cat = mainPic.category.one().slug ?? null %}
+<a href="{{ mainPic.url }}" data-category="{{ cat }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item {{ cat }} main-pic header-item">
     <img src="{{ mainPicThumbImg.getUrl() }}" alt="{{ mainPic.title }}">
 </a>
-{# <a href="{{ mainPic.url }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="main-pic header-item">
-    <img src="{{ mainPic.getUrl({ width: block.picsGoupWidth }) }}" alt="{{ mainPic.title }}">
-</a> #}
-{# <a href="{{ mainPic.url }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="main-pic header-item">
-    <img src="{{ mainPic.getUrl({ width: block.picsGoupWidth }) }}" alt="{{ mainPic.title }}">
-</a> #}

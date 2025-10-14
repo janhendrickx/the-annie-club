@@ -1,4 +1,4 @@
-dateModified: 1753972132
+dateModified: 1760377841
 elementSources:
   craft\elements\Asset:
     -
@@ -10,10 +10,10 @@ elementSources:
       key: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
       tableAttributes:
         - filename
+        - 'field:9ccfab1b-7fcd-4e50-9b17-9cd30330a654' # Categorie
         - size
         - dateModified
         - link
-        - 'field:9ccfab1b-7fcd-4e50-9b17-9cd30330a654' # Categorie
       type: native
     -
       key: temp

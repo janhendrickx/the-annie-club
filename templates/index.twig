@@ -23,13 +23,22 @@
 	</main>
 
     <div class="section">
-        <nav class="category-nav">
-            <a href="#" data-filter="all">All</a>
+        <nav class="category-nav filters-button-group">
+            <a class="is-checked" data-filter="*">All</a>
             {% if linkedPhotoCats is not empty %}
                 {% for category in linkedPhotoCats %}
-                    <a class="nav-link" href="#" data-filter="{{ category.slug }}">{{ category.title }}</a>
+                    <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
                 {% endfor %}
             {% endif %}
+
+            {# <div class="button-group filters-button-group">
+                <button class="button is-checked" data-filter="*">show all</button>
+                {% if linkedPhotoCats is not empty %}
+                    {% for category in linkedPhotoCats %}
+                        <button class="button" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
+                    {% endfor %}
+                {% endif %}
+                </div> #}
         </nav>
     </div>
 

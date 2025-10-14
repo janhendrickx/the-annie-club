@@ -4,7 +4,7 @@
         {# {% set site = photo.getImg({ width: 300, height: 300 }) %} #}
         {% set size = photo.getUrl({ height: otherPicHeight, width: otherPicWidth }) %}
         {% set cat = photo.category.one().slug ?? null %}
-            <a href="{{ photo.url }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item pic column-item">
+            <a href="{{ photo.url }}" data-category="{{ cat }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item {{ cat }} pic column-item">
                 <img src="{{ size }}" alt="{{ photo.title }}">
             </a>
     {% endfor %}
