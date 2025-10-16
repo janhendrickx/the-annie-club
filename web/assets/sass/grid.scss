@@ -2,13 +2,11 @@ $gapsize: 1rem;
 
 .grids-wrapper {
     width: 100vw;
-    // This height is being set in the template so it can be used in other calculations
-    // height: 500px;
     display: flex;
 }
+
+
 .grid-wrapper {
-    // display: flex;
-    // flex-direction: row;
     display: grid;
     gap: $gapsize;
     &:not(:last-child) {

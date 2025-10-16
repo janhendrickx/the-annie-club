@@ -2,10 +2,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   // Initieer Isotope
   var iso = new Isotope(".grids-wrapper", {
-    itemSelector: ".grid-item",
+    itemSelector: ".grid-wrapper",
+    layoutMode: 'masonry',
   });
 
-  // Filterknoppen
+  // Filterknoppen 
   var filtersElem = document.querySelector(".filters-button-group");
 
   filtersElem.addEventListener("click", function (event) {

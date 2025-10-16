@@ -1,4 +1,4 @@
-<div class="grid-wrapper grid--two-on-one {{ mainPicPosition }}" style="width: {{ block.picsGoupWidth }}px">
+<div data-category="{{ cat }}" class="grid-wrapper grid--two-on-one {{ mainPicPosition }} {{ cat }}" style="width: {{ block.picsGoupWidth }}px">
     {% if mainPicPosition == 'mainpic-bottom' %}
         {% include "_partials/grids/picsGroup" %}
         {% include "_partials/grids/mainpic" %}

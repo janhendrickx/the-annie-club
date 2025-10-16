@@ -4,6 +4,7 @@ fieldLayouts:
   16b91a8b-96c1-4a83-ac4e-0197f1c39ac9:
     cardThumbAlignment: start
     cardView:
+      - 'layoutElement:889aba79-2d8f-455a-9753-06c375db7835'
       - 'layoutElement:0417957b-ca8c-4169-877e-abba352efba8'
       - 'layoutElement:5c904126-d2f0-4f07-a4f0-bcd54bf13a26'
       - 'layoutElement:2435d6fe-1a70-4302-af85-50da78f31f31'
@@ -39,6 +40,23 @@ fieldLayouts:
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
             uid: e7680892-e6b4-46b8-b533-cf7c9a7bda31
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-10-16T17:30:30+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 9ccfab1b-7fcd-4e50-9b17-9cd30330a654 # Categorie
+            handle: null
+            includeInCards: true
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 889aba79-2d8f-455a-9753-06c375db7835
             userCondition: null
             warning: null
             width: 100

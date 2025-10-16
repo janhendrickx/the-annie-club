@@ -1,4 +1,3 @@
-{% set cat = mainPic.category.one().slug ?? null %}
-<a href="{{ mainPic.url }}" data-category="{{ cat }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item {{ cat }} main-pic header-item">
+<a href="{{ mainPic.url }}" data-filter="{{ cat }}" data-toggle="lightbox" data-gallery="photo-gallery" data-size="fullscreen" class="grid-item {{ cat }} main-pic header-item">
     <img src="{{ mainPicThumbImg.getUrl() }}" alt="{{ mainPic.title }}">
 </a>
