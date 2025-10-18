@@ -1,4 +1,6 @@
 <div data-category="{{ cat }}" class="grid-wrapper grid--one-on-one {{ cat }}" style="width: {{ block.picsGoupWidth }}px">
-    {% include "_partials/grids/mainpic" %}
-    {% include "_partials/grids/picsGroup" %}
+    <div class="grid-wrapper-inner">
+        {% include "_partials/grids/mainpic" %}
+        {% include "_partials/grids/picsGroup" %}
+    </div>
 </div>

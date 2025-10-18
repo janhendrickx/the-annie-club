@@ -1,8 +1,7 @@
-{% set allPics = craft.entries().section('photogallery').one() %}
+{% set allPics = allPics ?? null %}
 {% set gridsWrapperHeight = '500' %}
 
-<div class="grids-wrapper">
-{# <div class="grids-wrapper" height="{{ gridsWrapperHeight ~ 'px' }}"> #}
+<div class="grids-wrapper" height="{{ gridsWrapperHeight ~ 'px' }}">
     {% for block in allPics.picMatrix %}    
         {% set cat = block.category.one().slug ?? null %}
         {% set mainPic = block.mainPic.one() %}

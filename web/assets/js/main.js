@@ -1,26 +1,44 @@
-// Zorg dat de DOM geladen is
 document.addEventListener("DOMContentLoaded", function () {
-  // Initieer Isotope
-  var iso = new Isotope(".grids-wrapper", {
-    itemSelector: ".grid-wrapper",
-    layoutMode: 'masonry',
-  });
+    const filterButtons = document.querySelectorAll(".filters-button-group [data-filter]");
+    const wrappers = document.querySelectorAll(".grids-wrapper .grid-wrapper");
 
-  // Filterknoppen 
-  var filtersElem = document.querySelector(".filters-button-group");
-
-  filtersElem.addEventListener("click", function (event) {
-    event.preventDefault(); // voorkom springen bij <a href="#">
-    var target = event.target;
-    if (!target.matches("a, button")) return;
-
-    var filterValue = target.getAttribute("data-filter");
-    iso.arrange({ filter: filterValue });
-
-    // Optioneel: visuele feedback
-    filtersElem.querySelectorAll(".is-checked").forEach(function (el) {
-      el.classList.remove("is-checked");
+    wrappers.forEach((wrapper) => {
+        const originalWidth = wrapper.offsetWidth;
+        wrapper.dataset.originalWidth = originalWidth;
+        wrapper.style.width = originalWidth + "px";
+        wrapper.style.transition = "width 0.5s ease, opacity 0.5s ease";
+        wrapper.style.overflow = "hidden";
+        wrapper.style.opacity = "1";
+        wrapper.style.display = "block";
     });
-    target.classList.add("is-checked");
-  });
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", function (event) {
+            event.preventDefault();
+            const filterValue = this.getAttribute("data-filter").replace(".", "");
+
+            wrappers.forEach((wrapper) => {
+                const category = wrapper.dataset.category;
+                const matches = filterValue === "*" || category === filterValue;
+
+                if (matches) {
+                    wrapper.style.display = "block";
+                    requestAnimationFrame(() => {
+                        wrapper.style.width = wrapper.dataset.originalWidth + "px";
+                        wrapper.style.opacity = "1";
+                    });
+                } else {
+                    wrapper.style.width = "0px";
+                    wrapper.style.opacity = "0";
+
+                    setTimeout(() => {
+                        wrapper.style.display = "none";
+                    }, 500); // gelijk aan transition-duration
+                }
+            });
+
+            filterButtons.forEach((btn) => btn.classList.remove("is-checked"));
+            this.classList.add("is-checked");
+        });
+    });
 });

@@ -1,9 +1,16 @@
 {% extends "_layout.twig" %}
-
-{% set linkedPhotoCats = craft.entries()
+{% set allPics = craft.entries().section('photogallery').one() %}
+{% set matrixBlocks = allPics.picMatrix.all() %}
+    
+{% set uniqueCategories = matrixBlocks
+    | map(block => block.category.all())
+    | flatten  
+    | unique
+%}
+{# {% set linkedPhotoCats = craft.entries()
     .section('categories')           
     .all()
-%}
+%} #}
 
 {# {% set linkedPhotoCats = craft.entries()
     .section('home')           
@@ -19,50 +26,18 @@
 	{% include "_partials/_header.twig" %}
 
 	<main class="section py-4">
-        {% include "_partials/_photos-grid.twig" %}
+        {% include "_partials/_photos-grid.twig" with {allPics : allPics } %}
 	</main>
 
     <div class="section">
         <nav class="category-nav filters-button-group">
-            <a class="is-checked" data-filter="*">All</a>
-            {% if linkedPhotoCats is not empty %}
-                {% for category in linkedPhotoCats %}
+            <a href="#" class="nav-link is-checked" data-filter="*">All</a>
+            {% if uniqueCategories is not empty %}
+                {% for category in uniqueCategories %}
                     <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
                 {% endfor %}
             {% endif %}
-
-            {# <div class="button-group filters-button-group">
-                <button class="button is-checked" data-filter="*">show all</button>
-                {% if linkedPhotoCats is not empty %}
-                    {% for category in linkedPhotoCats %}
-                        <button class="button" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
-                    {% endfor %}
-                {% endif %}
-                </div> #}
         </nav>
     </div>
-
-{# <!-- Slider main container -->
-<div class="swiper">
-  <!-- Additional required wrapper -->
-  <div class="swiper-wrapper">
-    <!-- Slides -->
-    <div class="swiper-slide">Slide 1</div>
-    <div class="swiper-slide">Slide 2</div>
-    <div class="swiper-slide">Slide 3</div>
-    ...
-  </div>
-  <!-- If we need pagination -->
-  <div class="swiper-pagination"></div>
-
-  <!-- If we need navigation buttons -->
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
-</div> #}
-
-
 	{% include "_partials/_footer.twig" %}
 {% endblock %}

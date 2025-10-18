@@ -12013,28 +12013,48 @@ textarea.form-control-lg {
 .grids-wrapper {
   width: 100vw;
   display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  padding-bottom: 1rem;
 }
 
 .grid-wrapper {
-  display: grid;
-  gap: 1rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  transition: width 0.5s ease, opacity 0.5s ease;
+  opacity: 1;
+  width: auto;
+  display: block;
 }
 .grid-wrapper:not(:last-child) {
   margin-right: 1rem;
 }
 
+.grid-wrapper-inner {
+  display: grid;
+  gap: 1rem;
+  width: 100%;
+}
+
+.grid-wrapper.hidden {
+  width: 0 !important;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .header-item {
-  grid-column: 1/-1; /* Dit item beslaat alle kolommen, van de eerste tot de laatste */
+  grid-column: 1/-1;
 }
 .header-item img {
   -o-object-fit: cover;
      object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .picsGroup-wrapper {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -12048,6 +12068,15 @@ textarea.form-control-lg {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  display: block;
+}
+
+.grid-item img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 a {

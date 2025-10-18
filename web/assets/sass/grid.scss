@@ -3,38 +3,67 @@ $gapsize: 1rem;
 .grids-wrapper {
     width: 100vw;
     display: flex;
+    overflow-x: auto;
+    gap: $gapsize;
+    padding-bottom: $gapsize;
 }
 
-
 .grid-wrapper {
-    display: grid;
-    gap: $gapsize;
+    flex-shrink: 0;
+    overflow: hidden;
+    transition: width 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+    width: auto;
+    display: block;
+
     &:not(:last-child) {
         margin-right: $gapsize;
     }
 }
 
+.grid-wrapper-inner {
+    display: grid;
+    gap: $gapsize;
+    width: 100%;
+}
+
+.grid-wrapper.hidden {
+    width: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+}
+
 .header-item {
-    grid-column: 1 / -1; /* Dit item beslaat alle kolommen, van de eerste tot de laatste */
+    grid-column: 1 / -1;
+
     img {
         object-fit: cover;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
 
 .picsGroup-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     gap: $gapsize;
 }
 
 .column-item {
     overflow: hidden;
-    
+
     img {
         height: 100%;
         width: 100%;
         object-fit: cover;
         object-position: center;
+        display: block;
     }
+}
+
+.grid-item img {
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+    display: block;
 }
