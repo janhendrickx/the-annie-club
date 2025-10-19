@@ -1,4 +1,5 @@
 $gapsize: 1rem;
+$duration: 0.5s;
 
 .grids-wrapper {
     width: 100vw;
@@ -11,14 +12,18 @@ $gapsize: 1rem;
 .grid-wrapper {
     flex-shrink: 0;
     overflow: hidden;
-    transition: width 0.5s ease, opacity 0.5s ease;
+    transition:
+        max-width $duration ease,
+        opacity $duration ease;
+    max-width: 1000px; // overschreven via JS
     opacity: 1;
-    width: auto;
     display: block;
+}
 
-    &:not(:last-child) {
-        margin-right: $gapsize;
-    }
+.grid-wrapper.hidden {
+    max-width: 0 !important;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .grid-wrapper-inner {
@@ -27,43 +32,8 @@ $gapsize: 1rem;
     width: 100%;
 }
 
-.grid-wrapper.hidden {
-    width: 0 !important;
-    opacity: 0;
-    pointer-events: none;
-}
-
-.header-item {
-    grid-column: 1 / -1;
-
-    img {
-        object-fit: cover;
-        width: 100%;
-        height: auto;
-        display: block;
-    }
-}
-
 .picsGroup-wrapper {
     display: flex;
     gap: $gapsize;
-}
-
-.column-item {
-    overflow: hidden;
-
-    img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        object-position: center;
-        display: block;
-    }
-}
-
-.grid-item img {
-    object-fit: cover;
     width: 100%;
-    height: auto;
-    display: block;
 }

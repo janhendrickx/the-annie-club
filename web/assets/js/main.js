@@ -1,12 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
     const filterButtons = document.querySelectorAll(".filters-button-group [data-filter]");
     const wrappers = document.querySelectorAll(".grids-wrapper .grid-wrapper");
+    const container = document.querySelector(".grids-wrapper");
 
+    // Initieel: breedte opslaan
     wrappers.forEach((wrapper) => {
         const originalWidth = wrapper.offsetWidth;
         wrapper.dataset.originalWidth = originalWidth;
-        wrapper.style.width = originalWidth + "px";
-        wrapper.style.transition = "width 0.5s ease, opacity 0.5s ease";
+        wrapper.style.maxWidth = originalWidth + "px";
+        wrapper.style.transition = "max-width 0.5s ease, opacity 0.5s ease";
         wrapper.style.overflow = "hidden";
         wrapper.style.opacity = "1";
         wrapper.style.display = "block";
@@ -22,21 +24,32 @@ document.addEventListener("DOMContentLoaded", function () {
                 const matches = filterValue === "*" || category === filterValue;
 
                 if (matches) {
-                    wrapper.style.display = "block";
-                    requestAnimationFrame(() => {
-                        wrapper.style.width = wrapper.dataset.originalWidth + "px";
-                        wrapper.style.opacity = "1";
-                    });
+                    wrapper.classList.remove("hidden");
+                    wrapper.style.maxWidth = wrapper.dataset.originalWidth + "px";
+                    wrapper.style.opacity = "1";
                 } else {
-                    wrapper.style.width = "0px";
+                    wrapper.style.maxWidth = "0px";
                     wrapper.style.opacity = "0";
-
-                    setTimeout(() => {
-                        wrapper.style.display = "none";
-                    }, 500); // gelijk aan transition-duration
+                    wrapper.classList.add("hidden");
                 }
             });
 
+            // Scroll naar eerste zichtbare element
+            setTimeout(() => {
+                const firstVisible = Array.from(wrappers).find(
+                    (wrapper) => !wrapper.classList.contains("hidden")
+                );
+
+                if (firstVisible) {
+                    const offset = firstVisible.offsetLeft;
+                    container.scrollTo({
+                        left: offset,
+                        behavior: "smooth"
+                    });
+                }
+            }, 550);
+
+            // Activeer knopstijl
             filterButtons.forEach((btn) => btn.classList.remove("is-checked"));
             this.classList.add("is-checked");
         });
