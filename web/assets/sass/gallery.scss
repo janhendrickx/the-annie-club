@@ -1,0 +1,20 @@
+// The images of the gallery
+.grids-wrapper {
+    width: 100vw;
+    display: flex;
+    overflow-x: auto;
+    // gap: $gapsize;
+    padding-bottom: $gapsize;
+}
+
+.grid-wrapper-inner {
+    display: grid;
+    gap: $gapsize;
+    width: 100%;
+}
+
+.picsGroup-wrapper {
+    display: flex;
+    gap: $gapsize;
+    width: 100%;
+}

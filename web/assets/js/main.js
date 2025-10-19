@@ -27,7 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     wrapper.classList.remove("hidden");
                     wrapper.style.maxWidth = wrapper.dataset.originalWidth + "px";
                     wrapper.style.opacity = "1";
+                    wrapper.classList.add("active");
                 } else {
+                    wrapper.classList.remove("active");
                     wrapper.style.maxWidth = "0px";
                     wrapper.style.opacity = "0";
                     wrapper.classList.add("hidden");
