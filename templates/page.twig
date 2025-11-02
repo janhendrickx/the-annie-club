@@ -1,34 +1,55 @@
 {% extends "_layout.twig" %}
-{% set galery = craft.entries().section('photogallery').one() %}
-{% set photos = galery.photogallery %}
-{% set linkedPhotoCats = craft.entries()
-    .section('categories')           
-    .all()
-%}
 
-{# {% set linkedPhotoCats = craft.entries()
-    .section('home')           
-    .relatedTo({                
-        targetElement: craft.entries().section('homepage'),
-        field: 'photogallery'
-    })
-    .orderBy('lft ASC')
-    .all()
-%} #}
+{% set pageType = entry.type %}
 
 {% block content %}
 	{% include "_partials/_header.twig" %}
 
-	<main class="section">
+<main class="section">
     <div class="container pt-4 pb-2">
         <h1>{{ entry.title }}
     </div>
-		{# {% include "_partials/_masonry-grid.twig" %} #}
     <div class="container py-4">
         <div>{{ entry.tekst }}</div>
     </div>
-	</main>
+    {% if pageType == 'contact' %}
+    <div class="section">
+        <div class="container">
+            <form method="post" action="" accept-charset="UTF-8">
+            {{ csrfInput() }}
+                <input type="hidden" name="action" value="contact-form/send">
+
+                <div class="mb-3">
+                    <label for="firstName" class="form-label">Voornaam</label>
+                    <input type="text" class="form-control" id="firstName" name="firstName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="lastName" class="form-label">Naam</label>
+                    <input type="text" class="form-control" id="lastName" name="lastName" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mailadres</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefoonnummer</label>
+                    <input type="tel" class="form-control" id="phone" name="phone">
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Bericht</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-outline-secondary">Verstuur</button>
+            </form>
+        </div>
+    </div>
 
 
-	{# {% include "_partials/_footer.twig" %} #}
+    {% endif %}
+</main>
 {% endblock %}

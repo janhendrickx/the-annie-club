@@ -19,7 +19,10 @@ body {
 }
 
 .category-nav { 
-    display: flex;
+    // display: block;
+    // @include media-breakpoint-up(lg) {
+    //     display: flex;
+    // }
 }
 
 .category-nav .nav-link {

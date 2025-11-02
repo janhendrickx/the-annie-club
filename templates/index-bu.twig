@@ -53,15 +53,5 @@
     </div>
 </div>
 
-
-<nav class="category-nav filters-button-group d-none d-lg-flex">
-    <a href="#" class="nav-link is-checked" data-filter="*">All</a>
-    {% if uniqueCategories is not empty %}
-        {% for category in uniqueCategories %}
-            <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
-        {% endfor %}
-    {% endif %}
-</nav>
-
 	{% include "_partials/_footer.twig" %}
 {% endblock %}

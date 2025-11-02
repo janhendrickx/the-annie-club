@@ -1,9 +1,8 @@
-// The images of the gallery
+// The images of the gallery - all things not animation related
 .grids-wrapper {
     width: 100vw;
     display: flex;
     overflow-x: auto;
-    // gap: $gapsize;
     padding-bottom: $gapsize;
 }
 
@@ -18,3 +17,35 @@
     gap: $gapsize;
     width: 100%;
 }
+
+// end of all things image - non animation
+
+.grid-wrapper {
+    flex-shrink: 0;
+    overflow: hidden;
+    transition:
+    max-width $duration ease,
+    opacity $duration ease;
+    max-width: 1000px; // overschreven via JS
+    opacity: 1;
+    display: block;
+}
+
+.grid-wrapper:not(.active, .hidden) {
+    margin-right: 1rem;
+}
+
+.grid-wrapper.active {
+    margin-right: 1rem;
+}
+
+.grid-wrapper.hidden  {
+    margin-right: 0;
+}
+
+.grid-wrapper.hidden {
+    max-width: 0 !important;
+    opacity: 0;
+    pointer-events: none;
+}
+

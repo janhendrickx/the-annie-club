@@ -1,0 +1,70 @@
+color: null
+description: null
+fieldLayouts:
+  e6e7890d-a39f-465e-b667-55c91311fc9c:
+    cardThumbAlignment: end
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-05-29T12:47:54+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: a7357ebc-0672-4108-badf-b5f9dc10ccfb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-07-28T07:59:50+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 5724cdab-a194-4976-b0a9-cfdb42b12b60 # Tekst
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fc1f6d38-3250-41f2-90a8-a15c7ffd6398
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0064508a-7166-42a9-a976-b9af101dfd03
+        userCondition: null
+handle: contact
+hasTitleField: true
+icon: null
+name: Contactpagina
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
