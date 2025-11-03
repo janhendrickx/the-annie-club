@@ -8,16 +8,18 @@
     {# <div id="gallery-container" class="isotope-grid" data-category="{{ cat }}"> #}
     {# <div class="grid-sizer"></div> #}
         {% for image in allPics %}
-            {% set categories = photo.category.all() ?? null %}
+            {% set categories = image.category.all() ?? null %}
             {% set filterClasses = [] %}
+            {% set filterIsotopeClasses = [] %}
             {% for cat in categories %}
-                {% set filterClasses = filterClasses|merge(['.' ~ cat.slug]) %}
+                {% set filterClasses = filterClasses|merge([' ' ~ cat.slug]) %}
+                {% set filterIsotopeClasses = filterIsotopeClasses|merge(['.' ~ cat.slug]) %}
             {% endfor %}
             {# Transformeer op basis van een vaste HOOGTE #}
             {% set transformedImage = image.getUrl(fitTransform) %}
             {% set imageWidth = image.getWidth(fitTransform) %}
             {% set imageHeight = image.getHeight(fitTransform) %}
-            <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterClasses|join('') }}">
+            <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterIsotopeClasses|join('') }}">
                 <a href="{{ image.url }}" data-lightbox="packery-gallery">
                     {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
                     <img src="{{ transformedImage }}" 
