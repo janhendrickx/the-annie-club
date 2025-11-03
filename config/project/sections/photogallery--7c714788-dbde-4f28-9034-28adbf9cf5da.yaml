@@ -3,21 +3,16 @@ enableVersioning: true
 entryTypes:
   -
     uid: 940ab21b-abee-4658-9c5c-a914247d6f28 # Foto's
+  -
+    uid: 9137badf-6673-4593-9592-2e59855c1988 # Fotos
 handle: photogallery
 maxAuthors: 1
 name: Fotogallery
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club

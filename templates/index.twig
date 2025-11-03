@@ -1,6 +1,7 @@
 {% extends "_layout.twig" %}
-{% set allPics = craft.entries().section('photogallery').one() %}
-{% set matrixBlocks = allPics.picMatrix.all() %}
+{% set pics = craft.entries().section('photogallery').one() %}
+{% set allPicsOld = craft.entries().section('photogallery').one() %}
+{% set matrixBlocks = allPicsOld.picMatrix.all() %}
     
 {% set uniqueCategories = matrixBlocks
     | map(block => block.category.all())
@@ -26,7 +27,7 @@
 	{% include "_partials/_header.twig" %}
 
 	<main class="section py-4">
-        {% include "_partials/_photos-grid.twig" with {allPics : allPics } %}
+        {% include "_partials/_gallery" with {allPics : pics.photogallery.all() } %}
 	</main>
 
     <div class="section">

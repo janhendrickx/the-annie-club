@@ -1,7 +1,7 @@
 color: null
 description: null
 fieldLayouts:
-  70838215-b807-400a-9300-9f06f968b1c3:
+  e6e7890d-a39f-465e-b667-55c91311fc9c:
     cardThumbAlignment: end
     tabs:
       -
@@ -12,7 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-06-16T10:15:53+00:00'
+            dateAdded: '2025-05-29T12:47:54+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -33,15 +33,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 0e4d435a-63e8-4aab-87e5-bf8db78a672c
+            uid: a7357ebc-0672-4108-badf-b5f9dc10ccfb
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-07-28T18:25:04+00:00'
+            dateAdded: '2025-07-28T07:59:50+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: c5371f50-6484-46d4-9a00-27051cfc9635 # Fotos (Matrix)
+            fieldUid: 5724cdab-a194-4976-b0a9-cfdb42b12b60 # Tekst
             handle: null
             includeInCards: false
             instructions: null
@@ -50,34 +50,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d45ecf58-70cd-481d-bf80-e3ebba175a36
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-11-02T13:43:15+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: 6ce5706b-7cce-45e2-b3d7-ebbf369ed760 # Fotogalerij
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c9edc5a0-3533-41ea-b73e-a7473fe2674f
+            uid: fc1f6d38-3250-41f2-90a8-a15c7ffd6398
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 681b9349-2fc9-4fc4-a974-f964ec577780
+        uid: 0064508a-7166-42a9-a976-b9af101dfd03
         userCondition: null
-handle: pictures
+handle: contact
 hasTitleField: true
 icon: null
-name: "Foto's"
+name: Contactpagina
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

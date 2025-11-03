@@ -3,21 +3,16 @@ enableVersioning: true
 entryTypes:
   -
     uid: 96da3f18-1b13-4c2c-8aff-47ceb2649faa # Pagina
+  -
+    uid: eefc48d9-7057-4082-af4f-617e5053f422 # Contactpagina
 handle: paginas
 maxAuthors: 1
 name: "Pagina's"
 previewTargets:
   -
-    __assoc__:
-      -
-        - label
-        - 'Primary entry page'
-      -
-        - urlFormat
-        - '{url}'
-      -
-        - refresh
-        - '1'
+    label: 'Primary entry page'
+    refresh: '1'
+    urlFormat: '{url}'
 propagationMethod: all
 siteSettings:
   dd6e4919-ff41-4207-af9c-630665454e96: # The Annie Club

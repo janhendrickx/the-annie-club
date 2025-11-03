@@ -1,20 +1,29 @@
-// The images of the gallery
-.grids-wrapper {
-    width: 100vw;
-    display: flex;
-    overflow-x: auto;
-    // gap: $gapsize;
-    padding-bottom: $gapsize;
+.packery-grid {
+    /* De totale hoogte van de scrollende container */
+    height: 400px; 
+    
+    /* Zorgt voor horizontale scroll */
+    overflow-x: scroll; 
+    overflow-y: hidden;
+    
+    /* VERWIJDER deze regels:
+       white-space: nowrap; 
+       display: flex; 
+       align-items: flex-start;
+       Packery regelt de positionering, niet Flexbox. */
+    
+    /* Zorg dat de container de basis is voor absolute positionering */
+    position: relative; 
 }
 
-.grid-wrapper-inner {
-    display: grid;
-    gap: $gapsize;
-    width: 100%;
-}
-
-.picsGroup-wrapper {
-    display: flex;
-    gap: $gapsize;
-    width: 100%;
+.packery-item {
+    /* Hoogte moet overeenkomen met de Craft transformatie (195px) */
+    height: 195px; 
+    
+    /* Gutter wordt verwerkt in de JS, maar dit is de visuele ruimte tussen items */
+    margin-right: 10px; 
+    
+    /* Zorgt ervoor dat Packery de items kan positioneren */
+    /* De !important kan weg als er geen conflict is, maar is handig voor debuggen */
+    position: absolute !important; 
 }

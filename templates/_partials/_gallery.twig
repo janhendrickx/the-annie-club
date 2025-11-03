@@ -1,0 +1,31 @@
+{% set fitTransform = {
+    mode: 'fit',
+    height: 195,
+    quality: 85
+} %}
+
+<div id="horizontal-packery" class="packery-grid">
+    {# <div id="gallery-container" class="isotope-grid" data-category="{{ cat }}"> #}
+    {# <div class="grid-sizer"></div> #}
+        {% for image in allPics %}
+        {# {% set cat = photo.category.one().slug ?? null %} #}
+        {# Transformeer op basis van een vaste HOOGTE #}
+        {% set transformedImage = image.getUrl(fitTransform) %}
+        {# Belangrijk: De breedte is nu variabel #}
+        {% set imageWidth = image.getWidth(fitTransform) %}
+        {% set imageHeight = image.getHeight(fitTransform) %}
+            <div class="gallery-item packery-item">
+                <a href="{{ image.url }}"class="gallery-link">
+                    {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
+                    <img src="{{ transformedImage }}" 
+                        alt="{{ image.title }}" 
+                        width="{{ imageWidth }}" 
+                        height="{{ imageHeight }}"
+                        style="width: {{ imageWidth }}px;"
+                    >
+                </a>
+            </div>
+        {% endfor %}
+    
+    </div>
+</div>
