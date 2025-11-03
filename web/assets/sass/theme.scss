@@ -8,14 +8,16 @@
 
 // boostrap variables
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+
+// lightgallery
+@import "lightbox.scss";
+
 // custom
 @import "fonts.scss";
 @import "gallery.scss";
 @import "style.scss";
 
 
-// lightgallery
-// @import "node_modules/lightgallery/scss/lightgallery.scss";
 
 // swiper
 // @import "node_modules/swiper/swiper.scss";

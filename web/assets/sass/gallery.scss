@@ -1,6 +1,6 @@
 .packery-grid {
     /* De totale hoogte van de scrollende container */
-    height: 400px; 
+    height: 200px; 
     
     /* Zorgt voor horizontale scroll */
     overflow-x: scroll; 
@@ -18,10 +18,10 @@
 
 .packery-item {
     /* Hoogte moet overeenkomen met de Craft transformatie (195px) */
-    height: 195px; 
+    height: 95px; 
     
     /* Gutter wordt verwerkt in de JS, maar dit is de visuele ruimte tussen items */
-    margin-right: 10px; 
+    // margin-right: 10px; 
     
     /* Zorgt ervoor dat Packery de items kan positioneren */
     /* De !important kan weg als er geen conflict is, maar is handig voor debuggen */
