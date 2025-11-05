@@ -1,29 +1,27 @@
 .packery-grid {
-    /* De totale hoogte van de scrollende container */
-    height: 200px; 
-    
-    /* Zorgt voor horizontale scroll */
+    height: 300px; 
     overflow-x: scroll; 
     overflow-y: hidden;
-    
-    /* VERWIJDER deze regels:
-       white-space: nowrap; 
-       display: flex; 
-       align-items: flex-start;
-       Packery regelt de positionering, niet Flexbox. */
-    
-    /* Zorg dat de container de basis is voor absolute positionering */
     position: relative; 
 }
 
 .packery-item {
-    /* Hoogte moet overeenkomen met de Craft transformatie (195px) */
-    height: 95px; 
-    
-    /* Gutter wordt verwerkt in de JS, maar dit is de visuele ruimte tussen items */
-    // margin-right: 10px; 
-    
-    /* Zorgt ervoor dat Packery de items kan positioneren */
-    /* De !important kan weg als er geen conflict is, maar is handig voor debuggen */
+    height: 145px; 
     position: absolute !important; 
+    transition: opacity 0.3s ease;
+}
+
+.lightbox {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+}
+
+.lightboxOverlay {
+    overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 1) !important;
 }

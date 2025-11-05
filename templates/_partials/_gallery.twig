@@ -1,6 +1,8 @@
+{% set usedCategories = allPics | reduce((carry, image) => carry | merge(image.category), []) | unique %}
+
 {% set fitTransform = {
     mode: 'fit',
-    height: 95,
+    height: 150,
     quality: 85
 } %}
 
@@ -33,4 +35,15 @@
         {% endfor %}
     
     </div>
+</div>
+
+<div class="section">
+    <nav class="category-nav filters-button-group pt-4">
+        <a href="#" class="nav-link is-checked" data-filter="*">All</a>
+        {% if usedCategories is not empty %}
+            {% for category in usedCategories %}
+                <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
+            {% endfor %}
+        {% endif %}
+    </nav>
 </div>

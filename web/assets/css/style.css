@@ -12196,27 +12196,27 @@ body.lb-disable-scrolling {
   src: url("../fonts/raleway-v36-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 .packery-grid {
-  /* De totale hoogte van de scrollende container */
-  height: 200px;
-  /* Zorgt voor horizontale scroll */
+  height: 300px;
   overflow-x: scroll;
   overflow-y: hidden;
-  /* VERWIJDER deze regels:
-     white-space: nowrap; 
-     display: flex; 
-     align-items: flex-start;
-     Packery regelt de positionering, niet Flexbox. */
-  /* Zorg dat de container de basis is voor absolute positionering */
   position: relative;
 }
 
 .packery-item {
-  /* Hoogte moet overeenkomen met de Craft transformatie (195px) */
-  height: 95px;
-  /* Gutter wordt verwerkt in de JS, maar dit is de visuele ruimte tussen items */
-  /* Zorgt ervoor dat Packery de items kan positioneren */
-  /* De !important kan weg als er geen conflict is, maar is handig voor debuggen */
+  height: 145px;
   position: absolute !important;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+}
+
+.lightboxOverlay {
+  overflow-x: hidden;
+  background-color: rgb(255, 255, 255) !important;
 }
 
 a {
