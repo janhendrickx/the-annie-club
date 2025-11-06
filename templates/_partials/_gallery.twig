@@ -6,34 +6,36 @@
     quality: 85
 } %}
 
-<div id="horizontal-packery" class="packery-grid">
-    {# <div id="gallery-container" class="isotope-grid" data-category="{{ cat }}"> #}
-    {# <div class="grid-sizer"></div> #}
-        {% for image in allPics %}
-            {% set categories = image.category.all() ?? null %}
-            {% set filterClasses = [] %}
-            {% set filterIsotopeClasses = [] %}
-            {% for cat in categories %}
-                {% set filterClasses = filterClasses|merge([' ' ~ cat.slug]) %}
-                {% set filterIsotopeClasses = filterIsotopeClasses|merge(['.' ~ cat.slug]) %}
+<div class="packery-grid-wrapper">
+    <div id="horizontal-packery" class="packery-grid">
+        {# <div id="gallery-container" class="isotope-grid" data-category="{{ cat }}"> #}
+        {# <div class="grid-sizer"></div> #}
+            {% for image in allPics %}
+                {% set categories = image.category.all() ?? null %}
+                {% set filterClasses = [] %}
+                {% set filterIsotopeClasses = [] %}
+                {% for cat in categories %}
+                    {% set filterClasses = filterClasses|merge([' ' ~ cat.slug]) %}
+                    {% set filterIsotopeClasses = filterIsotopeClasses|merge(['.' ~ cat.slug]) %}
+                {% endfor %}
+                {# Transformeer op basis van een vaste HOOGTE #}
+                {% set transformedImage = image.getUrl(fitTransform) %}
+                {% set imageWidth = image.getWidth(fitTransform) %}
+                {% set imageHeight = image.getHeight(fitTransform) %}
+                <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterIsotopeClasses|join('') }}">
+                    <a href="{{ image.url }}" data-lightbox="packery-gallery">
+                        {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
+                        <img src="{{ transformedImage }}" 
+                            alt="{{ image.title }}" 
+                            width="{{ imageWidth }}" 
+                            height="{{ imageHeight }}"
+                            style="width: {{ imageWidth }}px;"
+                        >
+                    </a>
+                </div>
             {% endfor %}
-            {# Transformeer op basis van een vaste HOOGTE #}
-            {% set transformedImage = image.getUrl(fitTransform) %}
-            {% set imageWidth = image.getWidth(fitTransform) %}
-            {% set imageHeight = image.getHeight(fitTransform) %}
-            <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterIsotopeClasses|join('') }}">
-                <a href="{{ image.url }}" data-lightbox="packery-gallery">
-                    {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
-                    <img src="{{ transformedImage }}" 
-                        alt="{{ image.title }}" 
-                        width="{{ imageWidth }}" 
-                        height="{{ imageHeight }}"
-                        style="width: {{ imageWidth }}px;"
-                    >
-                </a>
-            </div>
-        {% endfor %}
-    
+        
+        </div>
     </div>
 </div>
 
@@ -47,12 +49,12 @@
         {% endif %}
     </nav>
 
-    <nav class="category-nav filters-button-group duplicate-nav pt-4" aria-hidden="true">
+    {# <nav class="category-nav filters-button-group duplicate-nav pt-4" aria-hidden="true">
         <a href="#" class="nav-link is-checked" data-filter="*">All</a>
         {% if usedCategories is not empty %}
             {% for category in usedCategories %}
                 <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
             {% endfor %}
         {% endif %}
-    </nav>
+    </nav> #}
 </div>
