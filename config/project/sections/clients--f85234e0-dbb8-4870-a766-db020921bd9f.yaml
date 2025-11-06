@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: b2a8d6cc-0b1f-4039-842f-2977ac14c237 # Link
-handle: navigation
+    uid: 8f0771fb-3769-4c03-9c9b-b7cc756d9140 # Klant
+handle: clients
 maxAuthors: 1
-name: Navigatie
+name: Klanten
 previewTargets:
   -
     label: 'Primary entry page'
@@ -19,6 +19,6 @@ siteSettings:
     template: null
     uriFormat: null
 structure:
-  maxLevels: null
-  uid: ace4ec2c-44e7-4594-91d0-2a6c68a27765
+  maxLevels: 1
+  uid: 226c37d4-1dff-4fcd-b4b3-e9bc4a007891
 type: structure

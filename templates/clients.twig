@@ -1,0 +1,54 @@
+{% extends "_layout.twig" %}
+{% set clients = craft.entries().section('clients').all() %}
+{% set clientThumb = {
+    mode: 'fit',
+    height: 250,
+    width: 250,
+    quality: 85
+} %}
+
+
+
+{% block content %}
+	{% include "_partials/_header.twig" %}
+
+	<main class="section">
+        <div class="container pt-4 pb-2">
+            <h1>{{ entry.title }}
+        </div>
+
+        <div class="container">
+
+            <div class="py-4">
+                {{ entry.tekst }}
+            </div>
+
+            <div class="pb-4">
+                <div class="logos row row-cols-2 row-cols-md-4 g-4">
+                    {% for client in clients %}
+                    {% set logo = client.logo.one() %}
+                        {% if client.website is not empty %}
+                            <a href="{{ client.website }}" target="_blank" class="col text-decoration-none text-dark">
+                        {% else %}
+                            <div class="col">
+                        {% endif %}
+                                <div class="h-100 d-flex flex-column justify-content-center align-items-center border p-4">
+                                    <img class="px-4" width="200" src="{{ logo.getUrl(clientThumb) }}" alt="{{ client.title }}">
+                                    <span class="small pt-2">{{ client.title }}</span>
+                                </div>
+                        {% if client.website is not empty %}
+                            </a>
+                        {% else %}
+                            </div>
+                        {% endif %}
+                        
+                    {% endfor %}
+                </div>
+            </div>
+
+        </div>
+	    
+	</main>
+
+
+{% endblock %}

@@ -26,6 +26,7 @@
   "dependencies": {
     "bootstrap": "^5.3.6",
     "bs5-lightbox": "^1.8.5",
+    "fontawesome-free": "^1.0.4",
     "isotope-layout": "^3.0.6",
     "swiper": "^11.2.10"
   }

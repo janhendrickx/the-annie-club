@@ -1,7 +1,7 @@
 color: null
 description: null
 fieldLayouts:
-  78f43310-06f3-4e29-bdf8-737835631273:
+  405159a2-0c3b-4c13-81a6-c07bfb22712d:
     cardThumbAlignment: end
     tabs:
       -
@@ -12,7 +12,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-06-16T12:54:02+00:00'
+            dateAdded: '2025-11-06T09:34:38+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -33,15 +33,15 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 1976d388-31a4-48a0-8054-ba79aa85d75f
+            uid: 8c538dd2-b20f-437e-8128-9f4f75424d20
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-11-06T07:58:46+00:00'
+            dateAdded: '2025-11-06T09:40:31+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: ae20a0eb-ca79-4174-a108-fa84b7746120 # Link
+            fieldUid: 1f427c2e-086a-4959-9c27-28358a0abeef # Logo
             handle: null
             includeInCards: false
             instructions: null
@@ -50,27 +50,15 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 68ae4438-c066-4023-90f1-bc6d5d6070b3
+            uid: 33740a06-5ab3-4fd8-9741-0fa688e92228
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-11-06T07:58:46+00:00'
+            dateAdded: '2025-11-06T09:40:31+00:00'
             editCondition: null
-            elementCondition:
-              class: craft\elements\conditions\entries\EntryCondition
-              conditionRules:
-                -
-                  class: craft\fields\conditions\LinkFieldConditionRule
-                  fieldUid: ae20a0eb-ca79-4174-a108-fa84b7746120 # Link
-                  layoutElementUid: 68ae4438-c066-4023-90f1-bc6d5d6070b3
-                  linkType: url
-                  operator: type
-                  uid: f183f754-5166-482b-942d-a12d58d80a90
-                  value: ''
-              elementType: craft\elements\Entry
-              fieldContext: global
-            fieldUid: 196d1915-312c-47ea-b919-c544966f0d2b # Icoon
+            elementCondition: null
+            fieldUid: 86ce5424-7b9d-4d8e-ad8b-02756a48a9de # Website
             handle: null
             includeInCards: false
             instructions: null
@@ -79,17 +67,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4e2301ea-d342-45da-b338-656a04211744
+            uid: c7622a87-3039-4272-bb9b-fb59add5ce6e
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 3c7dd87d-e23b-42e8-9f4d-dc0b4bd90e91
+        uid: 22271784-8ce2-4e1d-b673-aa98283ccc4f
         userCondition: null
-handle: link
+handle: client
 hasTitleField: true
 icon: null
-name: Link
+name: Klant
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

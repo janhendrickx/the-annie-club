@@ -4,19 +4,35 @@
 <nav class="navbar navbar-expand-lg">
 	<div class="container">
         <a class="navbar-brand" href="{{ siteUrl }}" aria-label="Home">
-            <img src="/assets/img/logo.png" width="160" height="160" alt="{{ siteName }}">
+            <img src="/assets/img/logo.png" width="175" height="175" alt="{{ siteName }}">
         </a>
 		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 		</button>
 		<div class="collapse navbar-collapse align-self-baseline" id="navbarNavAltMarkup">
 			<div class="navbar-nav ms-auto">
-                {% for nav in navigation %}
+                {% for navItem in navigation %}
                     {% set active = " " %}
-                    {% if entry is defined and entry is not null %}
-                        {% set active = entry.slug == nav.slug ? ' active' : '' %}
+                    {% set nav = navItem.navLink ?? null %}
+                    {% if nav %}
+                        {% if entry is defined and entry is not null %}
+                            {% set active = entry.slug == nav.value ? ' active' : '' %}
+                        {% endif %}
+				        <a class="nav-link{{ active }}" {% if nav.target %}target="{{ nav.target }}"{% endif %} aria-current="page" href="{{ nav.value }}">
+                            {% if navItem.navIcon %}
+                                {# <i class="fab fa-{{ navItem.navIcon }}"></i> #}
+                                {{ tag('i', {
+                                    class: [
+                                        'brands' in navItem.navIcon.styles ? 'fab' : 'fa-solid',
+                                        "fa-#{navItem.navIcon.name}",
+                                    ],
+                                }) }}
+
+                            {% else %}
+                                {{ nav.label }}
+                            {% endif %}
+                        </a>
                     {% endif %}
-				    <a class="nav-link{{ active }}" aria-current="page" href="{{ nav.slug }}">{{ nav.title }}</a>
 				{% endfor %}
 			</div>
 		</div>

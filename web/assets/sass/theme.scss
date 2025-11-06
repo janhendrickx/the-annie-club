@@ -1,23 +1,36 @@
-@import "node_modules/bootstrap/scss/functions.scss";
-@import "node_modules/bootstrap/scss/variables.scss";
-@import "node_modules/bootstrap/scss/maps.scss";
-@import "node_modules/bootstrap/scss/mixins.scss";
+// theme.scss - CORRECTE VOLGORDE
 
-// my custom variables
-@import "variables.scss";
+// 1. BOOTSTRAP AFHANKELIJKHEDEN
+// Laad de modules die andere modules nodig hebben (geen CSS-output).
+// De 'variables' en 'maps' zijn hier nodig om door jou overschreven te worden in stap 2.
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables"; // Lading 1: Definitie van de defaults
+@import "node_modules/bootstrap/scss/maps";
+@import "node_modules/bootstrap/scss/mixins";
 
-// boostrap variables
-@import "node_modules/bootstrap/scss/bootstrap.scss";
 
-// lightgallery
+// 2. JOUW CUSTOM VARIABELEN
+// Dit is de cruciale positie! Hier overschrijf je de standaardwaarden uit stap 1.
+@import "variables.scss"; 
+
+
+// 3. BOOTSTRAP KERN IMPORTEREN
+// Dit bestand laadt alle componenten, mixins, en de rest van de CSS.
+// Omdat je de variabelen in stap 2 hebt overschreven, zal de output nu jouw custom waarden gebruiken.
+@import "node_modules/bootstrap/scss/bootstrap";
+
+
+// 4. FONT AWESOME INTEGRATIE (Dit deel is perfect)
+
+@import "fontawesome/fontawesome";
+@import "fontawesome/solid";
+@import "fontawesome/brands";
+
+
+// 5. JE EIGEN THEMA EN ANDERE BIBLIOTHEKEN
 @import "lightbox.scss";
-
-// custom
-@import "fonts.scss";
+@import "fonts.scss"; // ⚠️ Let op: Dit bestand is waarschijnlijk overbodig als je Font Awesome hierboven al regelt.
 @import "gallery.scss";
 @import "style.scss";
 
-
-
-// swiper
 // @import "node_modules/swiper/swiper.scss";

@@ -23,15 +23,29 @@ body {
 }
 
 .category-nav .nav-link {
-    margin: 0 10px;
+    margin: 0 3rem;
     text-decoration: none;
     color: #99aabb;
     font-weight: bold;
     font-size: 1.5rem;
 }
 
-// .container::after {
-//     content: "";
-//     display: block;
-//     clear: both;
-// }
+.nav-section {
+    overflow: hidden;
+    white-space: nowrap; /* Zorgt ervoor dat elementen op één lijn blijven */
+    max-width: 100%;
+}
+
+.scroll-container {
+    display: flex; /* Zorgt ervoor dat de navigaties naast elkaar staan */
+    width: max-content; /* Zorg dat het breed genoeg is om beide te bevatten */
+    animation: scroll-loop 30s linear infinite; /* Pas de snelheid (30s) naar wens aan */
+}
+
+@keyframes scroll-loop {
+    from { transform: translateX(0); }
+    /* Verplaats de navigatie 50% van de totale breedte naar links. */
+    /* De exacte waarde moet de breedte van EEN van de navigaties zijn. */
+    /* Aangezien ze identiek zijn en naast elkaar staan, is -50% een goede start. */
+    to { transform: translateX(-50%); } 
+}

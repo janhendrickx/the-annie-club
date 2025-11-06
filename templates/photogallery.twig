@@ -22,7 +22,7 @@
         {% include "_partials/_photos-grid.twig" %}
 	</main>
 
-    <div class="section">
+    <div class="section nav-section">
         <nav class="category-nav">
             <a href="#" data-filter="all">All</a>
             {% if linkedPhotoCats is not empty %}
@@ -31,7 +31,17 @@
                 {% endfor %}
             {% endif %}
         </nav>
+
+        <nav class="category-nav filters-button-group pt-4 duplicate-nav" aria-hidden="true">
+        <a href="#" class="nav-link is-checked" data-filter="*">All</a>
+            {% if usedCategories is not empty %}
+                {% for category in usedCategories %}
+                    <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
+                {% endfor %}
+            {% endif %}
+        </nav>
     </div>
+
     
 	{# {% include "_partials/_footer.twig" %} #}
 {% endblock %}
