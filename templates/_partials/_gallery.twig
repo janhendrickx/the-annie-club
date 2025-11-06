@@ -1,10 +1,22 @@
 {% set usedCategories = allPics | reduce((carry, image) => carry | merge(image.category), []) | unique %}
+{% set maxWidth = 1200 %}
+{% set fixedHeight = 150 %}
+{% set quality = 85 %}
 
 {% set fitTransform = {
     mode: 'fit',
-    height: 150,
+    width: maxWidth,
+    height: fixedHeight,
     quality: 85
 } %}
+
+{% set fitTransform2x = {
+    mode: 'fit',
+    width: maxWidth * 2,
+    height: fixedHeight * 2,
+    quality: quality
+} %}
+
 
 <div class="packery-grid-wrapper">
     <div id="horizontal-packery" class="packery-grid">
@@ -20,12 +32,14 @@
                 {% endfor %}
                 {# Transformeer op basis van een vaste HOOGTE #}
                 {% set transformedImage = image.getUrl(fitTransform) %}
+                {% set transformedImage2x = image.getUrl(fitTransform2x) %}
+                
                 {% set imageWidth = image.getWidth(fitTransform) %}
                 {% set imageHeight = image.getHeight(fitTransform) %}
                 <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterIsotopeClasses|join('') }}">
                     <a href="{{ image.url }}" data-lightbox="packery-gallery">
                         {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
-                        <img src="{{ transformedImage }}" 
+                        <img src="{{ transformedImage2x }}" 
                             alt="{{ image.title }}" 
                             width="{{ imageWidth }}" 
                             height="{{ imageHeight }}"
@@ -48,13 +62,4 @@
             {% endfor %}
         {% endif %}
     </nav>
-
-    {# <nav class="category-nav filters-button-group duplicate-nav pt-4" aria-hidden="true">
-        <a href="#" class="nav-link is-checked" data-filter="*">All</a>
-        {% if usedCategories is not empty %}
-            {% for category in usedCategories %}
-                <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
-            {% endfor %}
-        {% endif %}
-    </nav> #}
 </div>

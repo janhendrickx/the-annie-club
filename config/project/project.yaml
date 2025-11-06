@@ -1,4 +1,4 @@
-dateModified: 1762422880
+dateModified: 1762438699
 elementSources:
   craft\elements\Asset:
     -
@@ -96,21 +96,16 @@ meta:
     6ce5706b-7cce-45e2-b3d7-ebbf369ed760: Fotogalerij # Fotogalerij
     6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8: "Foto's" # Foto's
     7c714788-dbde-4f28-9034-28adbf9cf5da: Fotogallery # Fotogallery
-    8c443b09-d123-4ae7-96bd-f1d4bdf718c8: 'Hoogte hoofdfoto' # Hoogte hoofdfoto
     8f0771fb-3769-4c03-9c9b-b7cc756d9140: Klant # Klant
     9ccfab1b-7fcd-4e50-9b17-9cd30330a654: Categorie # Categorie
-    27bcab7c-ab22-44da-acf0-0c579d8d50b9: Website # Website
     34d01be4-5471-43d6-ad9e-886596d50f55: Navigatie # Navigatie
-    51d6a2c6-9f6a-406c-bec7-c2487d5af200: 'Positie hoofdfoto' # Positie hoofdfoto
     76bff2af-8e60-4d73-9346-76389dbe69f0: "Pagina's" # Pagina's
-    82b7f5a5-6739-4baa-bd7c-c4a4bfafc1a7: 'Breedte fotogroep' # Breedte fotogroep
     86ce5424-7b9d-4d8e-ad8b-02756a48a9de: Website # Website
     96da3f18-1b13-4c2c-8aff-47ceb2649faa: Pagina # Pagina
     196d1915-312c-47ea-b919-c544966f0d2b: Icoon # Icoon
     460ec1d4-502a-4553-82f2-23c3f41054a7: Home # Home
     702fb49c-145b-4804-9326-248b64c7d98c: 'The Annie Club' # The Annie Club
     940ab21b-abee-4658-9c5c-a914247d6f28: "Foto's" # Foto's
-    1073c1d2-bcb7-4fa8-9400-f9942f9f625e: Hoofdfoto # Hoofdfoto
     1560e09b-7782-4fc6-8b2e-c0bdd137dcf9: Logos # Logos
     5724cdab-a194-4976-b0a9-cfdb42b12b60: Tekst # Tekst
     9137badf-6673-4593-9592-2e59855c1988: Fotos # Fotos
@@ -121,7 +116,6 @@ meta:
     b2a8d6cc-0b1f-4039-842f-2977ac14c237: Link # Link
     b7f3fc25-f9a6-45b0-ae16-e3f5eaee24b4: Homepage # Homepage
     bfc312f2-32f3-405b-939b-be57886d68b4: 'Externe link' # Externe link
-    c5371f50-6484-46d4-9a00-27051cfc9635: 'Fotos (Matrix)' # Fotos (Matrix)
     dd6e4919-ff41-4207-af9c-630665454e96: 'The Annie Club' # The Annie Club
     e5999d1c-04e2-4d0e-ba9c-abdaf5aabf2e: Categorie # Categorie
     eefc48d9-7057-4082-af4f-617e5053f422: Contactpagina # Contactpagina

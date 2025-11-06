@@ -38,23 +38,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-07-28T18:25:04+00:00'
-            editCondition: null
-            elementCondition: null
-            fieldUid: c5371f50-6484-46d4-9a00-27051cfc9635 # Fotos (Matrix)
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d45ecf58-70cd-481d-bf80-e3ebba175a36
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-11-02T13:43:15+00:00'
             editCondition: null
             elementCondition: null

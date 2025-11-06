@@ -64,7 +64,7 @@ fieldLayouts:
             dateAdded: '2025-07-31T07:25:18+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 82b7f5a5-6739-4baa-bd7c-c4a4bfafc1a7 # Breedte fotogroep
+            fieldUid: 82b7f5a5-6739-4baa-bd7c-c4a4bfafc1a7
             handle: null
             includeInCards: true
             instructions: null
@@ -81,7 +81,7 @@ fieldLayouts:
             dateAdded: '2025-07-31T09:39:08+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 8c443b09-d123-4ae7-96bd-f1d4bdf718c8 # Hoogte hoofdfoto
+            fieldUid: 8c443b09-d123-4ae7-96bd-f1d4bdf718c8
             handle: null
             includeInCards: true
             instructions: null
@@ -98,7 +98,7 @@ fieldLayouts:
             dateAdded: '2025-07-31T12:34:07+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 51d6a2c6-9f6a-406c-bec7-c2487d5af200 # Positie hoofdfoto
+            fieldUid: 51d6a2c6-9f6a-406c-bec7-c2487d5af200
             handle: null
             includeInCards: true
             instructions: null
@@ -115,7 +115,7 @@ fieldLayouts:
             dateAdded: '2025-07-31T12:34:07+00:00'
             editCondition: null
             elementCondition: null
-            fieldUid: 1073c1d2-bcb7-4fa8-9400-f9942f9f625e # Hoofdfoto
+            fieldUid: 1073c1d2-bcb7-4fa8-9400-f9942f9f625e
             handle: null
             includeInCards: false
             instructions: null
