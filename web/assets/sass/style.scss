@@ -72,6 +72,17 @@ main {
     font-weight: bold;
     font-size: 1.5rem;
     white-space: nowrap; /* Zorgt ervoor dat de tekst niet breekt */
+    transition: color .25s ease-in;
+    &:hover {
+        color: $secondary;
+    }
+}
+
+.nav-link.nav-cat-link {
+    --bs-nav-link-hover-color: red;
+    @include media-breakpoint-down(md){
+        --bs-nav-link-hover-color: #99aabb;
+    }
 }
 
 .nav-link.is-checked {

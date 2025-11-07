@@ -19,10 +19,10 @@ $navbar-light-brand-color: $primary;
 
 $offcanvas-horizontal-width: 250px;
 
-// $container-max-widths: (
-//   sm: 540px, // Standaard
-//   md: 720px, // Standaard
-//   lg: 992px, // Iets groter dan de standaard 992px
-//   xl: 1400px, // Standaard
-//   xxl: 1400px // Nieuwe, grotere breedte voor grote schermen
-// );
+$container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 1600px,
+    xl: 1800px,
+    xxl: 1800px
+);

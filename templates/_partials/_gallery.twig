@@ -23,6 +23,12 @@
     quality: quality
 } %}
 
+<div class="container-md my-3 d-md-none">
+    <button class="btn btn-outline-secondary text-lowercase" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav" aria-controls="offcanvasNav">
+        Categorieën
+    </button>
+</div>
+
 <div class="packery-grid-wrapper">
     <div id="horizontal-packery" class="packery-grid">
         {# <div id="gallery-container" class="isotope-grid" data-category="{{ cat }}"> #}
@@ -61,29 +67,36 @@
     </div>
 </div>
 
-<div class="section nav-section">
-    
-    {# De Swiper container (de viewport) #}
-    <div class="swiper category-swiper-container"> 
-        
-        {# De Swiper wrapper (bevat alle slides) #}
-        <nav class="swiper-wrapper category-nav filters-button-group pt-4">
-            
-            {# Elk navigatielinkje wordt een 'swiper-slide' #}
-            <a href="#" class="swiper-slide nav-link nav-cat-link is-checked" data-filter="*">All</a>
-            
+{# Filter navigatie #}
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav" aria-labelledby="offcanvasNavLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavLabel">Filter</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <ul class="nav flex-column filters-button-group">
+            <a href="#" class="nav-link nav-cat-link is-checked" data-filter="*">All</a>
             {% if usedCategories is not empty %}
-                {% for category in usedCategories %}
-                    {# BELANGRIJK: Gebruik </a> om de link af te sluiten, niet </button> #}
-                    <a href="#" class="swiper-slide nav-link nav-cat-link" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
+                {% for category in usedCategories %}                   
+                    <a href="#" class="nav-link nav-cat-link" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
                 {% endfor %}
             {% endif %}
-        </nav>
-    
-        {# Optioneel: Scrollbar of navigatiepijlen toevoegen #}
-        {# <div class="swiper-scrollbar"></div> #}
-        
+        </ul>
     </div>
+</div>
+
+<div class="swiper category-swiper-container d-none d-md-block"> 
+    {# De Swiper wrapper (bevat alle slides) #}
+    <nav class="swiper-wrapper category-nav filters-button-group pt-4">
+        {# Elk navigatielinkje wordt een 'swiper-slide' #}
+        <a href="#" class="swiper-slide nav-link nav-cat-link is-checked" data-filter="*">All</a>
+        {% if usedCategories is not empty %}
+            {% for category in usedCategories %}
+                {# BELANGRIJK: Gebruik </a> om de link af te sluiten, niet </button> #}
+                <a href="#" class="swiper-slide nav-link nav-cat-link" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
+            {% endfor %}
+        {% endif %}
+    </nav>
 </div>
 
 {% js "/assets/js/home.js" %}
