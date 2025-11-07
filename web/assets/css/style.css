@@ -6258,7 +6258,7 @@ textarea.form-control-lg {
 }
 .offcanvas, .offcanvas-xxl, .offcanvas-xl, .offcanvas-lg, .offcanvas-md, .offcanvas-sm {
   --bs-offcanvas-zindex: 1045;
-  --bs-offcanvas-width: 400px;
+  --bs-offcanvas-width: 250px;
   --bs-offcanvas-height: 30vh;
   --bs-offcanvas-padding-x: 1rem;
   --bs-offcanvas-padding-y: 1rem;
@@ -18138,11 +18138,9 @@ body {
 .packery-grid-wrapper {
   width: 100%;
   overflow-x: scroll;
-  /* Voeg een wrapper toe rond de .packery-grid als deze nog geen 100% breedte heeft */
 }
 
 .gallery-scroll {
-  border: 10px solid red;
   height: 300px;
   width: 100vw;
   display: block;
@@ -18150,16 +18148,30 @@ body {
 }
 
 .packery-grid {
-  height: 300px;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  position: relative;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .packery-grid {
+    position: relative;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+  }
 }
 
 .packery-item {
-  height: 145px;
-  position: absolute !important;
   transition: opacity 0.3s ease;
+}
+@media (max-width: 767.98px) {
+  .packery-item {
+    width: 100%;
+  }
+}
+@media (min-width: 768px) {
+  .packery-item {
+    height: 145px;
+    position: absolute !important;
+  }
 }
 
 .lightbox {
@@ -18173,6 +18185,32 @@ body {
   background-color: rgb(255, 255, 255) !important;
 }
 
+@media (max-width: 768px) {
+  /* 🛑 Schakel de Horizontale Lay-out uit onder 576px */
+  .scroll-wrapper {
+    overflow-x: hidden !important;
+    height: auto !important;
+  }
+  .packery-grid {
+    position: static !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    width: 100% !important;
+  }
+  .packery-item {
+    position: static !important;
+    float: none !important;
+    /* Items nemen de volledige breedte in op mobiel */
+    width: 100% !important;
+    height: auto !important;
+    /* Voeg verticale ruimte toe tussen de items */
+    margin-bottom: 10px !important;
+  }
+  .packery-item img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 body.lb-disable-scrolling {
   overflow: hidden;
 }
@@ -18370,6 +18408,14 @@ body {
   margin: 0;
   padding: 0;
   background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  align-content: center;
+  flex-grow: 1;
 }
 
 .scroll-container {
@@ -18394,7 +18440,6 @@ body {
 .category-swiper-container {
   width: 100%;
   /* Verbergt de standaard scrollbar van de browser */
-  width: 100%;
   /* 1. Dit is cruciaal: het activeert de native horizontale scroll-events */
   overflow-x: scroll;
   /* 2. Zorgt ervoor dat de scrollbar op veel browsers verborgen is */

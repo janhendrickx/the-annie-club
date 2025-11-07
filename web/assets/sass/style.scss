@@ -11,6 +11,14 @@ body {
     margin: 0;
     padding: 0;
     background: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    align-content: center;
+    flex-grow: 1;
 }
 
 .scroll-container {
@@ -34,9 +42,6 @@ body {
 .category-swiper-container {
     width: 100%;
     /* Verbergt de standaard scrollbar van de browser */
-    // overflow: hidden; 
-
-    width: 100%;
     
     /* 1. Dit is cruciaal: het activeert de native horizontale scroll-events */
     overflow-x: scroll; 

@@ -6,11 +6,9 @@ body {
 .packery-grid-wrapper {
     width: 100%;
     overflow-x: scroll;
-    /* Voeg een wrapper toe rond de .packery-grid als deze nog geen 100% breedte heeft */
 }
 
 .gallery-scroll {
-    border: 10px solid red;
     height: 300px;
     width: 100vw;
     display: block;
@@ -18,29 +16,66 @@ body {
 }
 
 .packery-grid {
-    height: 300px; 
-    overflow-x: hidden; 
-    overflow-y: hidden;
-    position: relative; 
+    height: auto; 
+    @include media-breakpoint-up(md) {
+        position: relative;
+        height: 300px; 
+        overflow-x: hidden; 
+        overflow-y: hidden;
+    } 
 }
 
 .packery-item {
-    height: 145px; 
-    position: absolute !important; 
     transition: opacity 0.3s ease;
+    @include media-breakpoint-down(md) {
+        width: 100%;
+    }
+    @include media-breakpoint-up(md) {
+        height: 145px; 
+        position: absolute !important;
+    }
 }
 
 .lightbox {
     position: absolute;
     width: 100vw;
     height: 100vh;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   bottom: 0;
 }
 
 .lightboxOverlay {
     overflow-x: hidden;
-  background-color: rgba(255, 255, 255, 1) !important;
+    background-color: rgba(255, 255, 255, 1) !important;
+}
+
+@media (max-width: 768px)  { 
+    /* 🛑 Schakel de Horizontale Lay-out uit onder 576px */
+    
+    .scroll-wrapper {
+        overflow-x: hidden !important; 
+        height: auto !important;
+    }
+    
+    .packery-grid {
+        position: static !important; 
+        height: auto !important;
+        overflow-x: hidden !important; 
+        width: 100% !important;
+    }
+
+    .packery-item {
+        position: static !important; 
+        float: none !important;
+        
+        /* Items nemen de volledige breedte in op mobiel */
+        width: 100% !important; 
+        height: auto !important;
+        
+        /* Voeg verticale ruimte toe tussen de items */
+        margin-bottom: 10px !important; 
+    }
+    
+    .packery-item img {
+        width: 100% !important;
+        height: auto !important;
+    }
 }
