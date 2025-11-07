@@ -54,3 +54,27 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const swiper = new Swiper('.category-swiper-container', {
+        direction: 'horizontal',
+        slidesPerView: 'auto', 
+        spaceBetween: 0, 
+        loop: true, 
+        grabCursor: true, 
+        
+        // ⭐ Laat de beweging vrij (belangrijk voor native scroll)
+        freeMode: true,
+        
+        // ⭐ Schakelt muiswiel-ondersteuning in
+        mousewheel: {
+            // Laat scroll-events door de Swiper gaan wanneer de rand bereikt is
+            releaseOnEdges: true, 
+        },
+        
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            hide: true, 
+        },
+    });
+});

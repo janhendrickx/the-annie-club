@@ -1,0 +1,22 @@
+:root {
+  --swiper-navigation-color: #50524e;
+}
+
+/* Zorg ervoor dat de container niet te veel scrollt */
+.client-swiper-container {
+    padding-bottom: 40px; /* Ruimte voor de paginatie dots */
+}
+
+/* Zorg ervoor dat de slides de volledige hoogte binnen de wrapper gebruiken */
+.client-swiper-container .swiper-slide {
+    height: auto; 
+    display: flex; /* Zorgt ervoor dat de a-tag/div de slide vult */
+    align-items: stretch; /* Essentieel voor gelijke hoogte */
+}
+
+/* De binnendiv moet de volledige hoogte van de slide innemen */
+.client-swiper-container .swiper-slide > div, 
+.client-swiper-container .swiper-slide > a {
+    height: 100%;
+    /* De h-100 in jouw code werkt nu correct */
+}

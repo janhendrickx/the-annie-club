@@ -38,7 +38,6 @@
                 {% set imageHeight = image.getHeight(fitTransform) %}
                 <div class="gallery-item packery-item {{ filterClasses|join(' ') }}" data-filter="{{ filterIsotopeClasses|join('') }}">
                     <a href="{{ image.url }}" data-lightbox="packery-gallery">
-                        {# <img src="{{ transformedImage }}" alt="{{ image.title }}" width="{{ originalWidth }}" height="{{ originalHeight }}"> #}
                         <img src="{{ transformedImage2x }}" 
                             alt="{{ image.title }}" 
                             width="{{ imageWidth }}" 
@@ -53,13 +52,59 @@
     </div>
 </div>
 
-<div class="section nav-section d-inline-flex">
-    <nav class="category-nav filters-button-group pt-4">
-        <a href="#" class="nav-link is-checked" data-filter="*">All</a>
-        {% if usedCategories is not empty %}
-            {% for category in usedCategories %}
-                <a href="#" class="nav-link is-checked" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</button>
-            {% endfor %}
-        {% endif %}
-    </nav>
+<div class="section nav-section">
+    
+    {# De Swiper container (de viewport) #}
+    <div class="swiper category-swiper-container"> 
+        
+        {# De Swiper wrapper (bevat alle slides) #}
+        <nav class="swiper-wrapper category-nav filters-button-group pt-4">
+            
+            {# Elk navigatielinkje wordt een 'swiper-slide' #}
+            <a href="#" class="swiper-slide nav-link is-checked" data-filter="*">All</a>
+            
+            {% if usedCategories is not empty %}
+                {% for category in usedCategories %}
+                    {# BELANGRIJK: Gebruik </a> om de link af te sluiten, niet </button> #}
+                    <a href="#" class="swiper-slide nav-link" data-filter="{{ '.' ~ category.slug }}">{{ category.title }}</a>
+                {% endfor %}
+            {% endif %}
+            
+        </nav>
+        
+        {# Optioneel: Scrollbar of navigatiepijlen toevoegen #}
+        {# <div class="swiper-scrollbar"></div> #}
+        
+    </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const swiper = new Swiper('.category-swiper-container', {
+            // Vereist voor horizontale navigatie
+            direction: 'horizontal',
+            
+            // Laat de slides hun eigen breedte bepalen
+            slidesPerView: 'auto', 
+            
+            // Afstand tussen de slides
+            spaceBetween: 10, 
+            
+            // Activeer de loop (Infinite Scroll)
+            loop: true, 
+
+            // ⭐ NIEUW: Activeer de "sleep" cursor en functionaliteit
+            grabCursor: true, 
+
+            // Zorgt ervoor dat de filters snel reageren
+            freeMode: true,
+            
+            // Optioneel: Scrollbar toevoegen
+            scrollbar: {
+                el: '.swiper-scrollbar',
+                hide: true, 
+            },
+        });
+    });
+</script>
+

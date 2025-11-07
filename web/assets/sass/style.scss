@@ -7,33 +7,10 @@ a {
     margin-block: 2rem;
 }
 
-.instagram-logo {
-    height: 20px;
-    width: 20px;
-}
-
 body {
     margin: 0;
     padding: 0;
     background: white;
-}
-
-.category-nav { 
-    display: flex;
-}
-
-.category-nav .nav-link {
-    margin: 0 3rem;
-    text-decoration: none;
-    color: #99aabb;
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-
-.nav-section {
-    overflow: hidden;
-    white-space: nowrap; /* Zorgt ervoor dat elementen op één lijn blijven */
-    max-width: 100%;
 }
 
 .scroll-container {
@@ -49,3 +26,68 @@ body {
     /* Aangezien ze identiek zijn en naast elkaar staan, is -50% een goede start. */
     to { transform: translateX(-50%); } 
 }
+
+
+// Category
+
+/* Zorg ervoor dat de Swiper-container niet te veel ruimte inneemt */
+.category-swiper-container {
+    width: 100%;
+    /* Verbergt de standaard scrollbar van de browser */
+    // overflow: hidden; 
+
+    width: 100%;
+    
+    /* 1. Dit is cruciaal: het activeert de native horizontale scroll-events */
+    overflow-x: scroll; 
+    
+    /* 2. Zorgt ervoor dat de scrollbar op veel browsers verborgen is */
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+/* Zorg ervoor dat elke slide (link) zijn eigen breedte bepaalt */
+.category-swiper-container .swiper-slide {
+    width: auto; 
+    /* Zorg ervoor dat de slides naast elkaar staan en hun flex gedrag behouden */
+    flex-shrink: 0; 
+}
+
+/* Eventueel: Standaard witruimte van de browser scrollbar verwijderen */
+.category-swiper-container {
+    padding-bottom: 5px; /* Voorkomt clipping van de onderkant als er een scrollbar is */
+}
+
+/* Zorg ervoor dat de links de gewenste opvulling en uiterlijk hebben */
+.category-swiper-container .nav-link {
+    /* Pas de padding en margins aan indien nodig */
+    margin: 0 3rem;
+    text-decoration: none;
+    color: #99aabb;
+    font-weight: bold;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Zorgt ervoor dat de tekst niet breekt */
+}
+
+.nav-link.is-checked {
+    color: $secondary;
+}
+
+
+// .category-nav { 
+//     display: flex;
+// }
+
+// .category-nav .nav-link {
+//     margin: 0 3rem;
+//     text-decoration: none;
+//     color: #99aabb;
+//     font-weight: bold;
+//     font-size: 1.5rem;
+// }
+
+// .nav-section {
+//     overflow: hidden;
+//     white-space: nowrap; /* Zorgt ervoor dat elementen op één lijn blijven */
+//     max-width: 100%;
+// }

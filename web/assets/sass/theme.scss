@@ -28,9 +28,10 @@
 
 
 // 5. JE EIGEN THEMA EN ANDERE BIBLIOTHEKEN
-@import "lightbox.scss";
+@import "clients.scss";
 @import "fonts.scss"; // ⚠️ Let op: Dit bestand is waarschijnlijk overbodig als je Font Awesome hierboven al regelt.
 @import "gallery.scss";
+@import "lightbox.scss";
 @import "style.scss";
 
 // @import "node_modules/swiper/swiper.scss";
