@@ -18153,7 +18153,7 @@ body {
 @media (min-width: 768px) {
   .packery-grid {
     position: relative;
-    height: 300px;
+    height: 310px;
     overflow-x: hidden;
     overflow-y: hidden;
   }
@@ -18169,7 +18169,7 @@ body {
 }
 @media (min-width: 768px) {
   .packery-item {
-    height: 145px;
+    height: 150px;
     position: absolute !important;
   }
 }

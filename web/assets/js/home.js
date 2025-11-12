@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // --- Packery Initialisatie & Herlayout (Desktop) ---
     var elem = document.querySelector('.packery-grid');
-    var itemHeight = 145;
+    var itemHeight = 150;
     let pckry; 
     
     if (!isMobile) {
