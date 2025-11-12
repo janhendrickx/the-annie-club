@@ -21,7 +21,7 @@ settings:
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:6d83ddd1-f2ce-4ce6-9aac-88fcbf50c2d8' # Foto's
   restrictedLocationSubpath: null
-  selectionLabel: null
+  selectionLabel: "Voeg foto's toe"
   showCardsInGrid: false
   showSearchInput: true
   showSiteMenu: true

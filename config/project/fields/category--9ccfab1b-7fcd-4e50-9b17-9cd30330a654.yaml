@@ -10,8 +10,9 @@ settings:
   maintainHierarchy: false
   maxRelations: null
   minRelations: 0
-  selectionLabel: null
+  selectionLabel: 'Voeg een categorie toe'
   showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedEntries: false
   showUnpermittedSections: false
