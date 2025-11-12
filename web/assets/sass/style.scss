@@ -2,11 +2,6 @@ a {
     text-transform: lowercase;
 }
 
-
-.header {
-    margin-block: 2rem;
-}
-
 body {
     margin: 0;
     padding: 0;
@@ -19,6 +14,34 @@ body {
 main {
     align-content: center;
     flex-grow: 1;
+}
+
+// navigation
+/* Standaard instelling voor extra-small schermen (xs) - <576px */
+.navbar-container-custom {
+    width: 100%;
+    /* Standaard padding om met de standaard .container overeen te komen */
+    padding-right: var(--bs-gutter-x, 0.75rem); 
+    padding-left: var(--bs-gutter-x, 0.75rem);
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .navbar-toggler {
+        height: fit-content;
+    }
+    
+    @include media-breakpoint-up(md){
+        max-width: 720px;
+    }
+    @include media-breakpoint-up(lg){
+        max-width: 1200px
+    }
+    @include media-breakpoint-up(xl){
+        max-width: 1400px
+    }   
 }
 
 .scroll-container {
@@ -79,31 +102,12 @@ main {
 }
 
 .nav-link.nav-cat-link {
-    --bs-nav-link-hover-color: red;
-    @include media-breakpoint-down(md){
-        --bs-nav-link-hover-color: #99aabb;
-    }
+    --bs-nav-link-hover-color: #50524e;
+    // @include media-breakpoint-down(md){
+    //     --bs-nav-link-hover-color: #99aabb;
+    // }
 }
 
 .nav-link.is-checked {
     color: $secondary;
 }
-
-
-// .category-nav { 
-//     display: flex;
-// }
-
-// .category-nav .nav-link {
-//     margin: 0 3rem;
-//     text-decoration: none;
-//     color: #99aabb;
-//     font-weight: bold;
-//     font-size: 1.5rem;
-// }
-
-// .nav-section {
-//     overflow: hidden;
-//     white-space: nowrap; /* Zorgt ervoor dat elementen op één lijn blijven */
-//     max-width: 100%;
-// }

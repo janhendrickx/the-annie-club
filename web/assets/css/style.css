@@ -757,17 +757,17 @@ progress {
 }
 @media (min-width: 992px) {
   .container-lg, .container-md, .container-sm, .container {
-    max-width: 1600px;
+    max-width: 960px;
   }
 }
 @media (min-width: 1200px) {
   .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1800px;
+    max-width: 1140px;
   }
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1800px;
+    max-width: 1320px;
   }
 }
 :root {
@@ -18400,10 +18400,6 @@ a {
   text-transform: lowercase;
 }
 
-.header {
-  margin-block: 2rem;
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -18416,6 +18412,39 @@ body {
 main {
   align-content: center;
   flex-grow: 1;
+}
+
+/* Standaard instelling voor extra-small schermen (xs) - <576px */
+.navbar-container-custom {
+  width: 100%;
+  /* Standaard padding om met de standaard .container overeen te komen */
+  padding-right: var(--bs-gutter-x, 0.75rem);
+  padding-left: var(--bs-gutter-x, 0.75rem);
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-container-custom .navbar-toggler {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 768px) {
+  .navbar-container-custom {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .navbar-container-custom {
+    max-width: 1200px;
+  }
+}
+@media (min-width: 1200px) {
+  .navbar-container-custom {
+    max-width: 1400px;
+  }
 }
 
 .scroll-container {
@@ -18475,12 +18504,7 @@ main {
 }
 
 .nav-link.nav-cat-link {
-  --bs-nav-link-hover-color: red;
-}
-@media (max-width: 767.98px) {
-  .nav-link.nav-cat-link {
-    --bs-nav-link-hover-color: #99aabb;
-  }
+  --bs-nav-link-hover-color: #50524e;
 }
 
 .nav-link.is-checked {
